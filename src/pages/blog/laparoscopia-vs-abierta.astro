@@ -1,0 +1,96 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+---
+
+<Layout>
+  <Header />
+  
+  <main class="article-page">
+    <div class="container">
+      <!-- Botón de retorno -->
+      <a href="/#recursos" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Volver a Recursos
+      </a>
+
+      <article class="article-content">
+        <header class="article-header">
+          <span class="article-category">Tecnología Médica</span>
+          <h1>Laparoscopía vs. Cirugía Abierta: Beneficios reales</h1>
+          
+          <div class="article-author-meta">
+            <div class="author-avatar">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+            </div>
+            <div class="author-info">
+              <strong>Escrito por: Dr. Raúl Marcelo Vintimilla Ávila</strong>
+              <span>Cirujano General y Laparoscopista | Hospital San Juan de Dios</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="article-body">
+          <p class="article-lead">
+            La cirugía mínimamente invasiva ha revolucionado la práctica médica en las últimas décadas. En el caso de afecciones comunes de la vesícula o hernias, la laparoscopía ofrece ventajas biológicas e inmediatas para el paciente que superan significativamente a la cirugía abierta tradicional.
+          </p>
+
+          <h2>¿Qué es la Cirugía Laparoscópica?</h2>
+          <p>
+            A diferencia de la cirugía abierta, que requiere una incisión de varios centímetros para exponer directamente los órganos, la laparoscopía se realiza a través de pequeñas incisiones de entre 5 y 10 milímetros. A través de una de ellas se introduce el laparoscopio (una fina cámara con fuente de luz de alta definición) que proyecta una imagen ampliada del abdomen en monitores quirúrgicos, permitiendo al cirujano operar con instrumental especializado de alta precisión.
+          </p>
+
+          <h2>Beneficios reales y demostrados para el paciente</h2>
+          
+          <h3>1. Mucho menos dolor postoperatorio</h3>
+          <p>
+            Al evitar el corte de grandes extensiones de músculo y tejido de la pared abdominal, el trauma tisular es inmensamente menor. Esto significa que las molestias en las horas y días posteriores a la intervención son mínimas y fácilmente controlables con analgésicos comunes, reduciendo la necesidad de medicamentos más fuertes.
+          </p>
+
+          <h3>2. Recuperación rápida y menor estancia en el hospital</h3>
+          <p>
+            La mayoría de las colecistectomías (vesícula) o hernioplastias laparoscópicas son ambulatorias o requieren apenas 24 horas de observación clínica. El paciente se reincorpora a su entorno familiar casi de inmediato y puede volver a trabajar o realizar actividades cotidianas ligeras en una semana, en comparación con las 3 a 5 semanas requeridas tras una cirugía abierta.
+          </p>
+
+          <h3>3. Cicatrices prácticamente imperceptibles</h3>
+          <p>
+            Las incisiones de 5 a 10 mm sanan con rapidez y dejan marcas mínimas que con el transcurso de los meses se vuelven casi invisibles. Esto contrasta con las cicatrices lineales largas de la cirugía abierta, las cuales además presentan un mayor riesgo de desarrollar hernias postquirúrgicas (eventraciones).
+          </p>
+
+          <h3>4. Menor riesgo de infecciones y complicaciones</h3>
+          <p>
+            Dado que los órganos internos no se exponen al ambiente del quirófano y las incisiones en la piel son diminutas, la probabilidad de infección en los sitios quirúrgicos se reduce drásticamente. Asimismo, hay una menor pérdida de sangre durante el procedimiento.
+          </p>
+
+          <h2>¿Cuándo no se puede realizar por laparoscopía?</h2>
+          <p>
+            Aunque es la técnica de elección en la gran mayoría de casos, existen situaciones donde la cirugía abierta es más segura:
+          </p>
+          <ul>
+            <li>Presencia de múltiples cirugías abdominales previas severas que hayan creado adherencias densas.</li>
+            <li>Infecciones muy avanzadas o peritonitis generalizada de difícil resolución.</li>
+            <li>Enfermedades cardíacas o pulmonares graves que impidan tolerar la insuflación de gas CO₂ necesaria para la laparoscopía.</li>
+          </ul>
+
+          <div class="article-disclaimer">
+            <strong>Criterio Profesional:</strong> El Dr. Vintimilla evalúa rigurosamente el estado cardiovascular, la anatomía y la historia clínica de cada paciente en el Hospital San Juan de Dios para definir la vía quirúrgica más segura.
+          </div>
+        </section>
+
+        <!-- CTA final en el artículo -->
+        <footer class="article-footer-cta">
+          <h3>¿Desea evaluar si su caso califica para cirugía laparoscópica?</h3>
+          <p>La consulta de valoración física presencial nos permite determinar de forma segura y transparente la mejor técnica quirúrgica para usted.</p>
+          <div class="cta-actions">
+            <a class="btn btn-accent" href="https://wa.me/593982757711?text=Hola%20Dr.%20Vintimilla,%20deseo%20saber%20si%20mi%20caso%20aplica%20para%20laparoscopía." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+            <a class="btn btn-secondary-outline" href="tel:+593724125046">Llamar al Consultorio</a>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

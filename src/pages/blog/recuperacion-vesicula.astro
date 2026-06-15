@@ -1,0 +1,94 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+---
+
+<Layout>
+  <Header />
+  
+  <main class="article-page">
+    <div class="container">
+      <!-- Botón de retorno -->
+      <a href="/#recursos" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Volver a Recursos
+      </a>
+
+      <article class="article-content">
+        <header class="article-header">
+          <span class="article-category">Cuidados en Casa</span>
+          <h1>Recuperación post-cirugía de vesícula por laparoscopía</h1>
+          
+          <div class="article-author-meta">
+            <div class="author-avatar">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+            </div>
+            <div class="author-info">
+              <strong>Escrito por: Dr. Raúl Marcelo Vintimilla Ávila</strong>
+              <span>Cirujano General y Laparoscopista | Hospital San Juan de Dios</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="article-body">
+          <p class="article-lead">
+            La colecistectomía laparoscópica es el estándar de oro para el tratamiento de cálculos en la vesícula. Al ser una cirugía de mínima invasión, permite una recuperación excepcionalmente rápida; sin embargo, seguir unas sencillas pautas higiénicas y dietéticas en casa le garantizará un retorno sin complicaciones a su vida normal.
+          </p>
+
+          <h2>1. Cuidado de las heridas quirúrgicas</h2>
+          <p>
+            El procedimiento se realiza a través de 3 o 4 incisiones milimétricas en el abdomen. Su cuidado es sencillo pero requiere constancia:
+          </p>
+          <ul>
+            <li><strong>Limpieza diaria:</strong> Lave las heridas suavemente durante su ducha diaria con agua y jabón neutro. No restriegue la zona.</li>
+            <li><strong>Secado meticuloso:</strong> Seque las incisiones dando pequeños toques con una toalla limpia y exclusiva o gasa estéril. La humedad favorece la proliferación bacteriana.</li>
+            <li><strong>Parches:</strong> Si se le colocaron apósitos impermeables, puede ducharse con ellos. Si son de gasa tradicional, manténgalos secos y cámbielos si se humedecen. Tras 3-5 días, las heridas suelen poder quedar al descubierto.</li>
+          </ul>
+
+          <h2>2. Plan nutricional (Alimentación baja en grasas)</h2>
+          <p>
+            Al retirar la vesícula, el hígado sigue produciendo bilis, pero esta gotea directamente al intestino de forma continua en lugar de almacenarse. El sistema digestivo necesita unos días para adaptarse:
+          </p>
+          <ul>
+            <li><strong>Primera semana (Fase blanda/baja en grasa):</strong> Consuma alimentos de fácil digestión como pechuga de pollo o filete de pescado a la plancha, arroz blanco, caldos desgrasados, puré de papa o camote, manzanas o peras cocidas.</li>
+            <li><strong>Alimentos a evitar rigurosamente:</strong> Comidas fritas, embutidos, quesos maduros, leche entera, chocolates, aguacate, condimentos fuertes, bebidas gaseosas y alcohol.</li>
+            <li><strong>Reintroducción progresiva:</strong> A partir de la segunda semana, puede ir incorporando grasas saludables de forma gradual y en pequeñas porciones para evaluar su tolerancia.</li>
+          </ul>
+
+          <h2>3. Actividad física y reposo relativo</h2>
+          <p>
+            La laparoscopía previene la debilidad muscular extrema asociada a las cirugías abiertas, pero requiere prudencia interna:
+          </p>
+          <ul>
+            <li><strong>Movilización temprana:</strong> Se le motivará a caminar distancias cortas dentro de casa desde el primer día. Caminar ayuda a eliminar el gas residual (CO₂) usado en la laparoscopía y activa la circulación.</li>
+            <li><strong>Esfuerzo físico y peso:</strong> Evite levantar objetos de más de 10 libras (5 kg) y realizar esfuerzos abdominales intensos (como pujar o hacer abdominales) durante al menos 4 semanas para prevenir hernias en los sitios de punción.</li>
+            <li><strong>Retorno laboral:</strong> Si su trabajo es de oficina, puede reincorporarse en 7 a 10 días. Si requiere esfuerzo físico, requerirá de 2 a 3 semanas de reposo laboral.</li>
+          </ul>
+
+          <h2>4. Síntomas normales durante los primeros días</h2>
+          <p>
+            Es habitual sentir cierta molestia leve o moderada en las heridas, así como un dolor reflejo en el hombro derecho (provocado por la irritación del diafragma debido al gas CO₂ insuflado). Ambos ceden con los analgésicos recetados y caminar suavemente.
+          </p>
+
+          <div class="article-disclaimer">
+            <strong>Cuándo comunicarse de urgencia:</strong> Si presenta fiebre mayor a 38°C, dolor abdominal severo que no cede con analgésicos, coloración amarilla en ojos o piel (ictericia), náuseas/vómitos persistentes o sangrado en las heridas quirúrgicas.
+          </div>
+        </section>
+
+        <!-- CTA final en el artículo -->
+        <footer class="article-footer-cta">
+          <h3>¿Presenta molestias o requiere una valoración postoperatoria?</h3>
+          <p>Los controles postquirúrgicos son clave para garantizar su completa salud. Si requiere coordinar su cita de revisión en Cuenca, contáctenos.</p>
+          <div class="cta-actions">
+            <a class="btn btn-accent" href="https://wa.me/593982757711?text=Hola%20Dr.%20Vintimilla,%20deseo%20coordinar%20mi%20control%20postoperatorio." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+            <a class="btn btn-secondary-outline" href="tel:+593724125046">Llamar al Consultorio</a>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
