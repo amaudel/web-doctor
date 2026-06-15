@@ -1900,6 +1900,16 @@
       box-shadow: var(--shadow-premium);
     }
 
+    .article-cover {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-md);
+      margin-bottom: 40px;
+      object-fit: cover;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+
     .article-header {
       margin-bottom: 40px;
     }
