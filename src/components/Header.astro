@@ -3,7 +3,7 @@
 <!-- Cabecera de Navegación -->
 <header class="header">
   <div class="container nav">
-    <a href="#inicio" class="brand" aria-label="Inicio Dr. Raúl Marcelo Vintimilla Ávila">
+    <a href="/#inicio" class="brand" aria-label="Inicio Dr. Raúl Marcelo Vintimilla Ávila">
       <span class="brand-name">Dr. Raúl M. Vintimilla Á.</span>
       <span class="brand-sub">Cirujano General y Laparoscopista</span>
     </a>
@@ -15,13 +15,13 @@
     </button>
 
     <nav class="menu" id="navMenu">
-      <a href="#inicio">Inicio</a>
-      <a href="#sintomas">Cuándo Consultar</a>
-      <a href="#perfil">Trayectoria</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#proceso">Proceso</a>
-      <a href="#faq">Preguntas Frecuentes</a>
-      <a href="#ubicacion">Ubicación</a>
+      <a href="/#inicio">Inicio</a>
+      <a href="/#sintomas">Cuándo Consultar</a>
+      <a href="/#perfil">Trayectoria</a>
+      <a href="/#servicios">Servicios</a>
+      <a href="/#proceso">Proceso</a>
+      <a href="/#faq">Preguntas Frecuentes</a>
+      <a href="/#ubicacion">Ubicación</a>
     </nav>
 
     <div class="nav-actions">
@@ -31,6 +31,16 @@
 </header>
 
 <script>
+  // Optimizar navegación en la página de inicio convirtiendo "/#anchor" en "#anchor"
+  if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+    document.querySelectorAll('a[href^="/#"]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href) {
+        link.setAttribute('href', href.substring(1));
+      }
+    });
+  }
+
   // Lógica del menú móvil (Hamburguesa)
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
