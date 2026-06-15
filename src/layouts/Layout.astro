@@ -1,5 +1,21 @@
 ---
 import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalPath?: string;
+  isBlogPost?: boolean;
+}
+
+const {
+  title = "Dr. Raúl Marcelo Vintimilla Ávila | Cirujano General y Laparoscopista en Cuenca",
+  description = "Agenda una valoración con el Dr. Raúl Marcelo Vintimilla Ávila, cirujano general y laparoscopista en Cuenca. Especialista en cirugía de vesícula, hernias y apéndice en el Hospital San Juan de Dios.",
+  canonicalPath = "",
+  isBlogPost = false,
+} = Astro.props;
+
+const canonicalUrl = `https://dr-vintimilla-landing.vercel.app${canonicalPath}`;
 ---
 
 <!DOCTYPE html>
@@ -9,17 +25,17 @@ import '../styles/global.css';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- SEO Local Optimizado -->
-  <title>Dr. Raúl Marcelo Vintimilla Ávila | Cirujano General y Laparoscopista en Cuenca</title>
-  <meta name="description" content="Agenda una valoración con el Dr. Raúl Marcelo Vintimilla Ávila, cirujano general y laparoscopista en Cuenca. Especialista en cirugía de vesícula, hernias y apéndice en el Hospital San Juan de Dios." />
+  <title>{title}</title>
+  <meta name="description" content={description} />
   <meta name="keywords" content="cirujano general en Cuenca, cirujano laparoscopista en Cuenca, cirugía general en Cuenca, cirugía laparoscópica en Cuenca, vesícula biliar Cuenca, operación de hernias Cuenca, apendicitis Cuenca, Dr. Raul Vintimilla Avila" />
-  <link rel="canonical" href="https://dr-vintimilla-landing.vercel.app/" />
+  <link rel="canonical" href={canonicalUrl} />
   
   <!-- Open Graph / Meta Compartir -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Dr. Raúl Marcelo Vintimilla Ávila | Cirujano General y Laparoscopista en Cuenca" />
-  <meta property="og:description" content="Cirugía general y laparoscópica con trato humano en Cuenca. Especialista en vesícula, hernias y apéndice por laparoscopía en el Hospital San Juan de Dios." />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
   <meta property="og:image" content="https://dr-vintimilla-landing.vercel.app/doctor_portrait.jpg" />
-  <meta property="og:url" content="https://dr-vintimilla-landing.vercel.app/" />
+  <meta property="og:url" content={canonicalUrl} />
 
   <!-- Google Fonts: Outfit (Títulos) e Inter (Cuerpo de texto) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,55 +43,80 @@ import '../styles/global.css';
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Marcado de Datos Estructurados JSON-LD (SEO Local y Médico) -->
-  <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    "name": "Dr. Raúl Marcelo Vintimilla Ávila",
-    "image": "https://dr-vintimilla-landing.vercel.app/doctor_portrait.jpg",
-    "description": "Atención especializada de cirugía general y laparoscópica en Cuenca. Consultas y cirugías planificadas previa cita en el Hospital San Juan de Dios.",
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "Universidad de Cuenca"
-    },
-    "medicalSpecialty": [
-      "GeneralSurgery",
-      "LaparoscopicSurgery"
-    ],
-    "telephone": "+593724125046",
-    "url": "https://dr-vintimilla-landing.vercel.app/",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Manuel J. Calle 1-59 y Av. Paucarbamba, Hospital San Juan de Dios",
-      "addressLocality": "Cuenca",
-      "addressRegion": "Azuay",
-      "postalCode": "010150",
-      "addressCountry": "EC"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -2.903822,
-      "longitude": -79.006856
-    },
-    "hospitalAffiliation": {
-      "@type": "MedicalOrganization",
-      "name": "Hospital San Juan de Dios (Cuenca)",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Manuel J. Calle 1-59 y Av. Paucarbamba",
-        "addressLocality": "Cuenca",
-        "addressCountry": "EC"
-      }
-    },
-    "knowsAbout": [
-      "Colecistectomía laparoscópica",
-      "Reparación de hernias",
-      "Apendicectomía",
-      "Cirugía de tejidos blandos y lipomas"
-    ]
+    !isBlogPost ? (
+      <script type="application/ld+json" is:inline set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "name": "Dr. Raúl Marcelo Vintimilla Ávila",
+        "image": "https://dr-vintimilla-landing.vercel.app/doctor_portrait.jpg",
+        "description": "Atención especializada de cirugía general y laparoscópica en Cuenca. Consultas y cirugías planificadas previa cita en el Hospital San Juan de Dios.",
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Universidad de Cuenca"
+        },
+        "medicalSpecialty": [
+          "GeneralSurgery",
+          "LaparoscopicSurgery"
+        ],
+        "telephone": "+593724125046",
+        "url": "https://dr-vintimilla-landing.vercel.app/",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Manuel J. Calle 1-59 y Av. Paucarbamba, Hospital San Juan de Dios",
+          "addressLocality": "Cuenca",
+          "addressRegion": "Azuay",
+          "postalCode": "010150",
+          "addressCountry": "EC"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -2.903822,
+          "longitude": -79.006856
+        },
+        "hospitalAffiliation": {
+          "@type": "MedicalOrganization",
+          "name": "Hospital San Juan de Dios (Cuenca)",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Manuel J. Calle 1-59 y Av. Paucarbamba",
+            "addressLocality": "Cuenca",
+            "addressCountry": "EC"
+          }
+        },
+        "knowsAbout": [
+          "Colecistectomía laparoscópica",
+          "Reparación de hernias",
+          "Apendicectomía",
+          "Cirugía de tejidos blandos y lipomas"
+        ]
+      })} />
+    ) : null
   }
-  </script>
+
+  {
+    isBlogPost ? (
+      <script type="application/ld+json" is:inline set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "MedicalWebPage",
+        "name": title,
+        "description": description,
+        "url": canonicalUrl,
+        "author": {
+          "@type": "Person",
+          "name": "Dr. Raúl Marcelo Vintimilla Ávila",
+          "jobTitle": "Cirujano General y Laparoscopista",
+          "worksFor": {
+            "@type": "MedicalOrganization",
+            "name": "Hospital San Juan de Dios"
+          }
+        },
+        "mainEntityOfPage": canonicalUrl,
+        "inLanguage": "es"
+      })} />
+    ) : null
+  }
 </head>
 <body>
   <slot />

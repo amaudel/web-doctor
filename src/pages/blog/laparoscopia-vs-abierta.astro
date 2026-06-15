@@ -5,7 +5,12 @@ import Footer from '../../components/Footer.astro';
 import '../../styles/global.css';
 ---
 
-<Layout>
+<Layout 
+  title="Laparoscopía vs. Cirugía Abierta: Diferencias | Dr. Raúl Vintimilla"
+  description="Conozca las diferencias, ventajas, tiempos de recuperación y cicatrices de la cirugía laparoscópica frente a la abierta con el Dr. Raúl Marcelo Vintimilla."
+  canonicalPath="/blog/laparoscopia-vs-abierta"
+  isBlogPost={true}
+>
   <Header />
   
   <main class="article-page">
@@ -15,7 +20,7 @@ import '../../styles/global.css';
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
         Volver a Recursos
       </a>
-
+ 
       <article class="article-content">
         <header class="article-header">
           <span class="article-category">Tecnología Médica</span>
@@ -27,7 +32,7 @@ import '../../styles/global.css';
             </div>
             <div class="author-info">
               <strong>Escrito por: Dr. Raúl Marcelo Vintimilla Ávila</strong>
-              <span>Cirujano General y Laparoscopista | Hospital San Juan de Dios</span>
+              <span><a href="/" style="color: var(--primary); text-decoration: underline;">Cirujano General en Cuenca</a> y <a href="/" style="color: var(--primary); text-decoration: underline;">Cirujano Laparoscopista</a> | Hospital San Juan de Dios</span>
             </div>
           </div>
         </header>
