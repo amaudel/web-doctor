@@ -1577,8 +1577,8 @@
       .badges {
         grid-template-columns: 1fr;
         gap: 12px;
-        max-width: 340px;
-        margin: 0 auto 24px;
+        width: 100%;
+        margin-bottom: 24px;
       }
 
       .badge {
@@ -1586,8 +1586,6 @@
         align-items: center;
         justify-content: space-between;
         padding: 14px 16px;
-        border-top: none;
-        border-left: 3px solid var(--primary);
       }
 
       .badge strong {
@@ -1937,6 +1935,11 @@
     @media (max-width: 1024px) {
       .credentials-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .testimonials-grid, .education-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
       }
     }
 
