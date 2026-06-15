@@ -1,0 +1,74 @@
+---
+---
+<!-- Cabecera de Navegación -->
+<header class="header">
+  <div class="container nav">
+    <a href="#inicio" class="brand" aria-label="Inicio Dr. Raúl Marcelo Vintimilla Ávila">
+      <span class="brand-name">Dr. Raúl M. Vintimilla Á.</span>
+      <span class="brand-sub">Cirujano General y Laparoscopista</span>
+    </a>
+    
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="menu" id="navMenu">
+      <a href="#inicio">Inicio</a>
+      <a href="#sintomas">Cuándo Consultar</a>
+      <a href="#perfil">Trayectoria</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#faq">Preguntas Frecuentes</a>
+      <a href="#ubicacion">Ubicación</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="btn btn-sm btn-primary" href="tel:+593724125046">Llamar Consultorio</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Lógica del menú móvil (Hamburguesa)
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen.toString());
+      
+      const children = menuToggle.children;
+      if (children.length >= 3) {
+        if (isOpen) {
+          (children[0] as HTMLElement).style.transform = 'rotate(45deg) translate(5px, 5px)';
+          (children[1] as HTMLElement).style.opacity = '0';
+          (children[2] as HTMLElement).style.transform = 'rotate(-45deg) translate(6px, -6px)';
+        } else {
+          (children[0] as HTMLElement).style.transform = 'none';
+          (children[1] as HTMLElement).style.opacity = '1';
+          (children[2] as HTMLElement).style.transform = 'none';
+        }
+      }
+    });
+
+    // Cerrar menú al hacer clic en un enlace (móvil)
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navMenu.classList.contains('open')) {
+          navMenu.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          const children = menuToggle.children;
+          if (children.length >= 3) {
+            (children[0] as HTMLElement).style.transform = 'none';
+            (children[1] as HTMLElement).style.opacity = '1';
+            (children[2] as HTMLElement).style.transform = 'none';
+          }
+        }
+      });
+    });
+  }
+</script>

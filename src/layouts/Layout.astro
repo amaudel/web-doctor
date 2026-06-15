@@ -1,0 +1,83 @@
+---
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Local Optimizado -->
+  <title>Dr. Raúl Marcelo Vintimilla Ávila | Cirujano General y Laparoscopista en Cuenca</title>
+  <meta name="description" content="Agenda una valoración con el Dr. Raúl Marcelo Vintimilla Ávila, cirujano general y laparoscopista en Cuenca. Especialista en cirugía de vesícula, hernias y apéndice en el Hospital San Juan de Dios." />
+  <meta name="keywords" content="cirujano general en Cuenca, cirujano laparoscopista en Cuenca, cirugía general en Cuenca, cirugía laparoscópica en Cuenca, vesícula biliar Cuenca, operación de hernias Cuenca, apendicitis Cuenca, Dr. Raul Vintimilla Avila" />
+  <link rel="canonical" href="https://dr-vintimilla-landing.vercel.app/" />
+  
+  <!-- Open Graph / Meta Compartir -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dr. Raúl Marcelo Vintimilla Ávila | Cirujano General y Laparoscopista en Cuenca" />
+  <meta property="og:description" content="Cirugía general y laparoscópica con trato humano en Cuenca. Especialista en vesícula, hernias y apéndice por laparoscopía en el Hospital San Juan de Dios." />
+  <meta property="og:image" content="https://dr-vintimilla-landing.vercel.app/doctor_portrait.jpg" />
+  <meta property="og:url" content="https://dr-vintimilla-landing.vercel.app/" />
+
+  <!-- Google Fonts: Outfit (Títulos) e Inter (Cuerpo de texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Marcado de Datos Estructurados JSON-LD (SEO Local y Médico) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Raúl Marcelo Vintimilla Ávila",
+    "image": "https://dr-vintimilla-landing.vercel.app/doctor_portrait.jpg",
+    "description": "Atención especializada de cirugía general y laparoscópica en Cuenca. Consultas y cirugías planificadas previa cita en el Hospital San Juan de Dios.",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Universidad de Cuenca"
+    },
+    "medicalSpecialty": [
+      "GeneralSurgery",
+      "LaparoscopicSurgery"
+    ],
+    "telephone": "+593724125046",
+    "url": "https://dr-vintimilla-landing.vercel.app/",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Manuel J. Calle 1-59 y Av. Paucarbamba, Hospital San Juan de Dios",
+      "addressLocality": "Cuenca",
+      "addressRegion": "Azuay",
+      "postalCode": "010150",
+      "addressCountry": "EC"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -2.903822,
+      "longitude": -79.006856
+    },
+    "hospitalAffiliation": {
+      "@type": "MedicalOrganization",
+      "name": "Hospital San Juan de Dios (Cuenca)",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Manuel J. Calle 1-59 y Av. Paucarbamba",
+        "addressLocality": "Cuenca",
+        "addressCountry": "EC"
+      }
+    },
+    "knowsAbout": [
+      "Colecistectomía laparoscópica",
+      "Reparación de hernias",
+      "Apendicectomía",
+      "Cirugía de tejidos blandos y lipomas"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <slot />
+</body>
+</html>

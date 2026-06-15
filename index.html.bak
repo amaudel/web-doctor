@@ -1,0 +1,2176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Local Optimizado -->
+  <title>Dr. Raúl Marcelo Vintimilla Ávila | Cirujano General y Laparoscopista en Cuenca</title>
+  <meta name="description" content="Agenda una valoración con el Dr. Raúl Marcelo Vintimilla Ávila, cirujano general y laparoscopista en Cuenca. Especialista en cirugía de vesícula, hernias y apéndice en el Hospital San Juan de Dios." />
+  <meta name="keywords" content="cirujano general en Cuenca, cirujano laparoscopista en Cuenca, cirugía general en Cuenca, cirugía laparoscópica en Cuenca, vesícula biliar Cuenca, operación de hernias Cuenca, apendicitis Cuenca, Dr. Raul Vintimilla Avila" />
+  <link rel="canonical" href="https://dr-vintimilla-landing.vercel.app/" />
+  
+  <!-- Open Graph / Meta Compartir -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dr. Raúl Marcelo Vintimilla Ávila | Cirujano General y Laparoscopista en Cuenca" />
+  <meta property="og:description" content="Cirugía general y laparoscópica con trato humano en Cuenca. Especialista en vesícula, hernias y apéndice por laparoscopía en el Hospital San Juan de Dios." />
+  <meta property="og:image" content="https://dr-vintimilla-landing.vercel.app/doctor_portrait.png" />
+  <meta property="og:url" content="https://dr-vintimilla-landing.vercel.app/" />
+
+  <!-- Google Fonts: Outfit (Títulos) e Inter (Cuerpo de texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Paleta de colores clínica y premium */
+      --primary-dark: #0f172a;    /* Slate 900 */
+      --primary: #0284c7;         /* Sky 600 */
+      --primary-hover: #0369a1;   /* Sky 700 */
+      --primary-light: #f0f9ff;   /* Sky 50 */
+      --accent: #10b981;          /* Emerald 500 */
+      --accent-hover: #059669;    /* Emerald 600 */
+      --accent-light: #ecfdf5;    /* Emerald 50 */
+      
+      --text-dark: #1e293b;       /* Slate 800 */
+      --text-muted: #64748b;      /* Slate 500 */
+      --bg-light: #f8fafc;        /* Slate 50 */
+      --bg-card: #ffffff;
+      --border: #e2e8f0;          /* Slate 200 */
+      --border-light: #f1f5f9;    /* Slate 100 */
+      
+      /* Sombras premium suavizadas y difusas */
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.03);
+      --shadow-md: 0 8px 20px rgba(15, 23, 42, 0.04);
+      --shadow-lg: 0 16px 36px rgba(15, 23, 42, 0.06);
+      --shadow-premium: 0 24px 64px rgba(15, 23, 42, 0.08);
+      
+      /* Radio de bordes y transiciones */
+      --radius-sm: 12px;
+      --radius-md: 18px;
+      --radius-lg: 30px;
+      --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      
+      --max-width: 1200px;
+    }
+
+    /* Reset global y accesibilidad */
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+    
+    html { 
+      scroll-behavior: smooth; 
+      scroll-padding-top: 90px; 
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { 
+      color: inherit; 
+      text-decoration: none; 
+      transition: var(--transition-smooth);
+    }
+    
+    button {
+      font-family: inherit;
+    }
+
+    .container { 
+      width: min(var(--max-width), calc(100% - 48px)); 
+      margin: 0 auto; 
+    }
+
+    /* Header y Navegación */
+    .header {
+      position: sticky; 
+      top: 0; 
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.85);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+      transition: var(--transition-smooth);
+    }
+
+    .nav {
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between;
+      min-height: 80px; 
+      gap: 24px;
+    }
+
+    .brand { 
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .brand-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800; 
+      font-size: 1.3rem;
+      line-height: 1.1; 
+      color: var(--primary-dark);
+      letter-spacing: -0.01em;
+    }
+    
+    .brand-sub { 
+      color: var(--primary); 
+      font-weight: 700; 
+      font-size: 0.82rem; 
+      margin-top: 4px; 
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .menu { 
+      display: flex; 
+      gap: 32px; 
+      align-items: center; 
+    }
+    
+    .menu a { 
+      color: var(--text-muted); 
+      font-weight: 600; 
+      font-size: 0.92rem;
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .menu a:hover {
+      color: var(--primary);
+    }
+
+    .menu a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: var(--transition-smooth);
+    }
+
+    .menu a:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Botones */
+    .btn {
+      display: inline-flex; 
+      align-items: center; 
+      justify-content: center;
+      gap: 10px; 
+      padding: 14px 28px; 
+      border-radius: var(--radius-sm); 
+      border: none;
+      font-weight: 700; 
+      font-size: 0.95rem;
+      cursor: pointer; 
+      transition: var(--transition-smooth); 
+    }
+
+    .btn-sm {
+      padding: 10px 20px;
+      font-size: 0.88rem;
+    }
+
+    .btn-primary { 
+      background: var(--primary); 
+      color: white; 
+    }
+    
+    .btn-primary:hover { 
+      background: var(--primary-hover); 
+      transform: translateY(-2px); 
+      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.25);
+    }
+
+    .btn-secondary-outline { 
+      background: transparent; 
+      color: var(--primary); 
+      border: 2px solid rgba(2, 132, 199, 0.3); 
+    }
+    
+    .btn-secondary-outline:hover { 
+      background: var(--primary-light);
+      border-color: var(--primary);
+      transform: translateY(-2px); 
+    }
+
+    .btn-secondary {
+      background: var(--primary-light);
+      color: var(--primary-hover);
+      border: 1px solid rgba(2, 132, 199, 0.15);
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(2, 132, 199, 0.10);
+      transform: translateY(-2px);
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-accent:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+    }
+
+    /* Menu móvil (Hamburguesa) */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 18px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 101;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary-dark);
+      border-radius: 2px;
+      transition: var(--transition-smooth);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 112px 0 96px;
+      background: radial-gradient(circle at 80% 20%, rgba(2, 132, 199, 0.05), transparent 50%),
+                  radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.03), transparent 50%),
+                  linear-gradient(to bottom, #ffffff, #f8fafc);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(2, 132, 199, 0.05) 1.5px, transparent 1.5px);
+      background-size: 32px 32px;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid; 
+      grid-template-columns: 1.15fr 0.85fr; 
+      gap: 56px; 
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px;
+      padding: 6px 16px; 
+      background: rgba(2, 132, 199, 0.05); 
+      color: var(--primary-hover);
+      border: 1px solid rgba(2, 132, 199, 0.12);
+      border-radius: 999px; 
+      font-weight: 600; 
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 24px;
+    }
+    
+    .eyebrow svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      line-height: 1.12; 
+      margin-bottom: 24px;
+      color: var(--primary-dark);
+      letter-spacing: -0.03em;
+      font-weight: 800;
+    }
+
+    h1 span {
+      color: var(--primary);
+      font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+      display: block;
+      margin-top: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .lead { 
+      font-size: clamp(1.05rem, 1.3vw, 1.18rem); 
+      color: var(--text-muted); 
+      margin-bottom: 36px;
+      max-width: 620px; 
+    }
+
+    .hero-actions { 
+      display: flex; 
+      gap: 16px; 
+      flex-wrap: wrap; 
+      margin-bottom: 48px; 
+    }
+    
+    .hero-actions .btn {
+      padding: 16px 32px;
+    }
+
+    .badges {
+      display: grid; 
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 20px; 
+    }
+
+    .badge {
+      background: var(--bg-card); 
+      border: 1px solid rgba(226, 232, 240, 0.8); 
+      border-top: 3px solid var(--primary);
+      border-radius: var(--radius-sm); 
+      padding: 18px 16px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: var(--transition-smooth);
+    }
+    
+    .badge:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(2, 132, 199, 0.2);
+    }
+
+    .badge strong { 
+      display: block; 
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem; 
+      color: var(--primary-dark);
+      letter-spacing: -0.01em;
+    }
+    
+    .badge span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .hero-card {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-card::after {
+      content: '';
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(2, 132, 199, 0.12) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-img-container {
+      width: 100%;
+      max-width: 380px;
+      aspect-ratio: 4 / 5;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--primary-light) 0%, #ffffff 100%);
+      border: 4px solid white;
+      box-shadow: var(--shadow-premium);
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-smooth);
+    }
+
+    .hero-img-container:hover img {
+      transform: scale(1.03);
+    }
+
+    .hero-card-tag {
+      position: absolute;
+      bottom: 30px;
+      left: -20px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      z-index: 3;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .hero-card-tag-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      color: var(--accent);
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-card-tag-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .hero-card-tag-text strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--primary-dark);
+    }
+
+    .hero-card-tag-text span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* Secciones generales */
+    section { 
+      padding: 104px 0; 
+      border-bottom: 1px solid var(--border-light);
+    }
+    
+    .section-header {
+      max-width: 700px;
+      margin-bottom: 56px;
+    }
+
+    .section-subtitle {
+      color: var(--primary);
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-title { 
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.9rem, 3vw, 2.6rem); 
+      color: var(--primary-dark);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    /* Sección: Cuándo acudir a consulta */
+    .symptom-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .symptom-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      border-radius: var(--radius-md);
+      padding: 36px 28px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .symptom-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: var(--primary);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition-smooth);
+    }
+
+    .symptom-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(2, 132, 199, 0.25);
+    }
+
+    .symptom-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .symptom-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-sm);
+      background: rgba(2, 132, 199, 0.05);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      margin-bottom: 24px;
+      transition: var(--transition-smooth);
+    }
+
+    .symptom-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .symptom-card:hover .symptom-icon {
+      background: var(--primary);
+      color: white;
+      transform: scale(1.05) rotate(5deg);
+    }
+
+    .symptom-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.18rem;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .symptom-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* Banner de Advertencia de Síntomas de Alarma */
+    .alarm-banner {
+      margin-top: 48px;
+      background: #fffdf5;
+      border: 1px solid #fdf3d7;
+      border-left: 4px solid #d97706;
+      padding: 24px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .alarm-icon {
+      color: #d97706;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+    }
+    
+    .alarm-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+    
+    .alarm-text {
+      font-size: 0.98rem;
+      color: #b45309;
+      line-height: 1.55;
+    }
+    
+    .alarm-text strong {
+      color: #78350f;
+    }
+
+    /* Sección: Perfil del Doctor */
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .profile-stats {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-lg);
+      padding: 48px 40px;
+      box-shadow: var(--shadow-premium);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-stats::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -20%;
+      width: 60%;
+      height: 60%;
+      background: radial-gradient(circle, rgba(2, 132, 199, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .profile-stat-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #1e293b;
+      position: relative;
+      z-index: 2;
+    }
+
+    .profile-stat-item:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+
+    .profile-stat-circle {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      transition: var(--transition-smooth);
+    }
+
+    .profile-stat-circle svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .profile-stat-item:hover .profile-stat-circle {
+      background: #38bdf8;
+      color: #0f172a;
+      transform: scale(1.08) rotate(-5deg);
+    }
+
+    .profile-stat-text strong {
+      display: block;
+      font-size: 1.15rem;
+      color: #ffffff;
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: -0.01em;
+    }
+
+    .profile-stat-text span {
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
+    .profile-text-content h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.55rem;
+      color: var(--primary-dark);
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .profile-text-content p {
+      color: var(--text-dark);
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+    }
+
+    .profile-checklist {
+      list-style: none;
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .profile-checklist-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .profile-checklist-item svg {
+      width: 16px;
+      height: 16px;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* Sección: Servicios y Procedimientos */
+    .bg-light-sec {
+      background-color: #f8fafc;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .services-column-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.45rem;
+      color: var(--primary-dark);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .services-column-title svg {
+      width: 24px;
+      height: 24px;
+      color: var(--primary);
+    }
+
+    .services-column {
+      border-radius: var(--radius-lg);
+      transition: var(--transition-smooth);
+    }
+
+    .services-column.featured {
+      background: linear-gradient(180deg, rgba(2, 132, 199, 0.03) 0%, rgba(255, 255, 255, 0.8) 100%);
+      border: 1px solid rgba(2, 132, 199, 0.25);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      box-shadow: var(--shadow-premium);
+      position: relative;
+    }
+
+    .services-column.featured::before {
+      content: 'Especialidad Principal';
+      position: absolute;
+      top: -12px;
+      right: 32px;
+      background: var(--primary);
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 14px;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+    }
+
+    .services-column.standard {
+      padding: 40px 32px;
+    }
+
+    .service-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px) scale(1.005);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(2, 132, 199, 0.2);
+    }
+
+    .service-card h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 700;
+    }
+
+    .service-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .service-tag {
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      background: rgba(16, 185, 129, 0.08);
+      color: var(--accent-hover);
+      border: 1px solid rgba(16, 185, 129, 0.15);
+      border-radius: 999px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    /* Sección: Proceso de Atención */
+    .process-timeline {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      margin-top: 48px;
+    }
+
+    /* Línea conectora del timeline */
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      top: 52px;
+      left: 50px;
+      right: 50px;
+      height: 2px;
+      background: linear-gradient(to right, var(--primary) 0%, var(--border) 50%, var(--primary) 100%);
+      z-index: 1;
+    }
+
+    .process-step {
+      position: relative;
+      background: white;
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
+      box-shadow: var(--shadow-sm);
+      z-index: 2;
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .process-step:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .process-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.25);
+      border: 3px solid white;
+      transition: var(--transition-smooth);
+    }
+    
+    .process-step:hover .process-number {
+      background: var(--primary-hover);
+      transform: scale(1.1);
+    }
+
+    .process-step h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.18rem;
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    .process-step p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* Sección: Preguntas Frecuentes (FAQ) - Minimalista */
+    .faq-container {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .faq-item {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      border-radius: 0;
+      overflow: hidden;
+      box-shadow: none;
+      transition: var(--transition-smooth);
+    }
+
+    .faq-item:hover {
+      border-bottom-color: var(--primary);
+    }
+
+    .faq-header {
+      width: 100%;
+      padding: 28px 0;
+      background: transparent;
+      border: none;
+      text-align: left;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      transition: var(--transition-smooth);
+    }
+
+    .faq-header:hover {
+      background: transparent;
+      color: var(--primary);
+    }
+
+    .faq-icon {
+      width: 20px;
+      height: 20px;
+      color: var(--primary);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      flex-shrink: 0;
+    }
+
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      background: transparent;
+    }
+
+    .faq-content-inner {
+      padding: 0 0 28px 0;
+      font-size: 1rem;
+      color: var(--text-muted);
+      border-top: none;
+      padding-top: 8px;
+      line-height: 1.6;
+    }
+
+    .faq-item.active {
+      border-color: var(--primary);
+    }
+
+    .faq-item.active .faq-header {
+      color: var(--primary);
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-item.active .faq-content {
+      max-height: 250px; 
+    }
+
+    /* Sección: Ubicación y Contacto */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .location-info {
+      background: white;
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      box-shadow: var(--shadow-premium);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .contact-item:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .contact-detail h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+
+    .contact-detail p, .contact-detail a {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .contact-detail a:hover {
+      color: var(--primary);
+    }
+
+    .location-actions {
+      display: flex;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .map-container {
+      height: 100%;
+      min-height: 400px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      display: block;
+    }
+
+    /* CTA Box */
+    .cta-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #0284c7 100%);
+      color: white;
+      border-radius: var(--radius-lg);
+      padding: 64px 56px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-premium);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(2, 132, 199, 0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-content {
+      max-width: 700px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-banner h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+      margin-bottom: 16px;
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .cta-banner p {
+      font-size: 1.08rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 32px;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #0f172a;
+      color: #94a3b8;
+      padding: 64px 0 40px;
+      border-top: none;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand h3 {
+      font-family: 'Outfit', sans-serif;
+      color: white;
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .footer-brand p {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      max-width: 340px;
+    }
+
+    .footer-links h4, .footer-contact h4 {
+      font-family: 'Outfit', sans-serif;
+      color: white;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .footer-contact-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--primary);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .footer-contact-item a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #1e293b;
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+    }
+
+    .footer-legal-notice {
+      color: #64748b;
+      max-width: 600px;
+      line-height: 1.5;
+    }
+
+    /* Botón Flotante de WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      background-color: var(--accent);
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .whatsapp-float::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.3;
+      z-index: -1;
+      animation: pulse 2s infinite;
+    }
+
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+      fill: currentColor;
+    }
+
+    .whatsapp-float:hover {
+      background-color: var(--accent-hover);
+      transform: scale(1.08) translateY(-3px);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.5; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+
+    /* Barra Fija de Contacto Móvil (Solo visible en pantallas pequeñas) */
+    .mobile-contact-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 -10px 30px rgba(15, 23, 42, 0.06);
+      z-index: 98;
+      border-top: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    .mobile-contact-bar a {
+      display: inline-flex;
+    }
+
+    .mobile-contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 14px 20px 24px;
+      gap: 14px;
+    }
+
+    .mobile-contact-grid .btn {
+      width: 100%;
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-grid, .profile-grid, .location-grid { 
+        grid-template-columns: 1fr; 
+        gap: 48px;
+      }
+      
+      .hero {
+        padding: 80px 0 64px;
+      }
+
+      .hero-grid {
+        text-align: center;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .lead {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-card {
+        order: 1; 
+      }
+
+      .hero-card-tag {
+        left: 20px;
+      }
+
+      .hero-img-container {
+        max-width: 340px;
+      }
+
+      .symptom-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .services-column.featured, .services-column.standard {
+        padding: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+      }
+
+      .services-column.featured::before {
+        display: none;
+      }
+
+      .process-timeline {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .process-timeline::before {
+        display: none;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      /* Estilos para el menú móvil */
+      .menu-toggle {
+        display: flex;
+      }
+
+      .menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 40px 24px;
+        gap: 20px;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 99;
+        box-shadow: var(--shadow-lg);
+        border-top: 1px solid var(--border-light);
+      }
+
+      .menu.open {
+        transform: translateX(0);
+      }
+
+      .menu a {
+        font-size: 1.15rem;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-light);
+        font-weight: 600;
+      }
+
+      .menu a::after {
+        display: none;
+      }
+
+      .nav-actions {
+        display: none; 
+      }
+
+      .symptom-grid, .process-timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-checklist {
+        grid-template-columns: 1fr;
+      }
+
+      /* Mostrar la barra inferior fija de contacto */
+      .mobile-contact-bar {
+        display: block;
+      }
+
+      body {
+        padding-bottom: 100px; 
+      }
+
+      .footer {
+        padding-bottom: 120px; 
+      }
+
+      .whatsapp-float {
+        bottom: 100px; 
+        right: 20px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .whatsapp-float svg {
+        width: 24px;
+        height: 24px;
+      }
+      
+      section {
+        padding: 72px 0;
+      }
+      
+      .cta-banner {
+        padding: 48px 24px;
+      }
+      
+      .location-info {
+        padding: 32px 24px;
+      }
+
+      .location-actions {
+        flex-direction: column;
+      }
+      
+      .alarm-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 20px;
+      }
+
+      .hero {
+        padding: 48px 0;
+      }
+
+      h1 {
+        font-size: 1.85rem;
+        margin-bottom: 16px;
+      }
+
+      h1 span {
+        font-size: 1.05rem;
+        margin-top: 8px;
+      }
+
+      .lead {
+        margin-bottom: 24px;
+        font-size: 1rem;
+      }
+
+      .hero-actions {
+        margin-bottom: 28px;
+      }
+    }
+
+    /* Accesibilidad: Foco visible */
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+  </style>
+
+  <!-- Marcado de Datos Estructurados JSON-LD (SEO Local y Médico) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Raúl Marcelo Vintimilla Ávila",
+    "image": "https://dr-vintimilla-landing.vercel.app/doctor_portrait.png",
+    "description": "Atención especializada de cirugía general y laparoscópica en Cuenca. Consultas y cirugías planificadas previa cita en el Hospital San Juan de Dios.",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Universidad de Cuenca"
+    },
+    "medicalSpecialty": [
+      "GeneralSurgery",
+      "LaparoscopicSurgery"
+    ],
+    "telephone": "+593724125046",
+    "url": "https://dr-vintimilla-landing.vercel.app/",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Manuel J. Calle 1-59 y Av. Paucarbamba, Hospital San Juan de Dios",
+      "addressLocality": "Cuenca",
+      "addressRegion": "Azuay",
+      "postalCode": "010150",
+      "addressCountry": "EC"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -2.903822,
+      "longitude": -79.006856
+    },
+    "hospitalAffiliation": {
+      "@type": "MedicalOrganization",
+      "name": "Hospital San Juan de Dios (Cuenca)",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Manuel J. Calle 1-59 y Av. Paucarbamba",
+        "addressLocality": "Cuenca",
+        "addressCountry": "EC"
+      }
+    },
+    "knowsAbout": [
+      "Colecistectomía laparoscópica",
+      "Reparación de hernias",
+      "Apendicectomía",
+      "Cirugía de tejidos blandos y lipomas"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Cabecera de Navegación -->
+  <header class="header">
+    <div class="container nav">
+      <a href="#inicio" class="brand" aria-label="Inicio Dr. Raúl Marcelo Vintimilla Ávila">
+        <span class="brand-name">Dr. Raúl M. Vintimilla Á.</span>
+        <span class="brand-sub">Cirujano General y Laparoscopista</span>
+      </a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="menu" id="navMenu">
+        <a href="#inicio">Inicio</a>
+        <a href="#sintomas">Cuándo Consultar</a>
+        <a href="#perfil">Trayectoria</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#faq">Preguntas Frecuentes</a>
+        <a href="#ubicacion">Ubicación</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-sm btn-primary" href="tel:+593724125046">Llamar Consultorio</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section / Introducción -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">
+            <!-- Stethoscope SVG Icon -->
+            <svg viewBox="0 0 24 24"><path d="M19 8c-.55 0-1 .45-1 1v3c0 2.21-1.79 4-4 4s-4-1.79-4-4V9c0-1.66-1.34-3-3-3S4 7.34 4 9v3c0 3.39 2.42 6.21 5.61 6.8-.46.74-.61 1.63-.4 2.5C9.69 22.84 11.23 24 13 24c2.21 0 4-1.79 4-4v-1.1c2.83-.93 5-3.59 5-6.9V9c0-.55-.45-1-1-1zm-9 4c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zM6 9c0-.55.45-1 1-1s1 .45 1 1v3c0 1.1-.9 2-2 2s-2-.9-2-2V9zm7 13c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+            Atención Quirúrgica en Cuenca
+          </span>
+          <h1>Dr. Raúl Marcelo Vintimilla Ávila <span>Cirujano General y Laparoscopista en Cuenca</span></h1>
+          <p class="lead">Si busca la valoración de un <strong>cirujano general en Cuenca</strong> o un <strong>cirujano laparoscopista en Cuenca</strong> con amplia trayectoria, el Dr. Raúl Marcelo Vintimilla Ávila le ofrece una evaluación honesta, enfocada en la seguridad y en la recuperación ágil de su salud.</p>
+          
+          <div class="hero-actions">
+            <a class="btn btn-accent" href="https://wa.me/593982757711?text=Hola%20Dr.%20Vintimilla,%20deseo%20agendar%20una%20consulta%20de%20valoración." target="_blank" rel="noopener">
+              <!-- WhatsApp SVG Icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.488 1.459 5.416 1.46h.007c5.811 0 10.536-4.729 10.54-10.544.003-2.817-1.092-5.466-3.08-7.456C17.48 2.624 14.835 1.528 12.01 1.528c-5.817 0-10.543 4.731-10.548 10.547-.001 1.933.504 3.824 1.464 5.433l-.962 3.513 3.606-.945zm11.388-7.794c-.308-.154-1.82-.9-2.102-1.002-.283-.103-.488-.154-.693.154-.206.308-.797 1.002-.977 1.207-.18.206-.36.231-.668.077-.308-.154-1.3-.48-2.477-1.53-1.155-1.03-1.936-2.302-2.162-2.61-.226-.308-.024-.475.13-.628.138-.138.308-.36.462-.54.154-.18.206-.308.308-.514.103-.206.051-.385-.026-.54-.077-.154-.693-1.67-.95-2.29-.25-.6-.524-.52-.72-.53-.188-.01-.403-.01-.617-.01-.214 0-.564.08-.86.402-.296.322-1.13 1.102-1.13 2.69 0 1.587 1.156 3.12 1.316 3.326.16.206 2.274 3.473 5.508 4.872.77.332 1.37.531 1.838.68.775.246 1.48.212 2.037.129.62-.093 1.82-.745 2.078-1.464.256-.718.256-1.334.18-1.463-.077-.13-.283-.206-.59-.36z"/></svg>
+              Agendar Cita por WhatsApp
+            </a>
+            <a class="btn btn-secondary-outline" href="tel:+593724125046">
+              <!-- Phone SVG Icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Llamar al Consultorio
+            </a>
+          </div>
+
+          <div class="badges">
+            <div class="badge">
+              <strong>+30 Años</strong>
+              <span>Trayectoria médica</span>
+            </div>
+            <div class="badge">
+              <strong>Mínima Invasión</strong>
+              <span>Cirugía Laparoscópica</span>
+            </div>
+            <div class="badge">
+              <strong>Socio Fundador</strong>
+              <span>Hosp. San Juan de Dios</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-img-container">
+            <img src="doctor_portrait.png" alt="Dr. Raúl Marcelo Vintimilla Ávila, cirujano general en Cuenca y cirujano laparoscopista en Cuenca" width="400" height="500" loading="eager" />
+          </div>
+          <div class="hero-card-tag">
+            <div class="hero-card-tag-icon">
+              <!-- Shield Check SVG -->
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            </div>
+            <div class="hero-card-tag-text">
+              <strong>Práctica Médica Ética</strong>
+              <span>Seguridad en cada cirugía</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Cuándo acudir a consulta -->
+    <section id="sintomas">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">¿Cuándo Consultar?</span>
+          <h2 class="section-title">Síntomas y condiciones que requieren evaluación quirúrgica</h2>
+        </div>
+        
+        <div class="symptom-grid">
+          <div class="symptom-card">
+            <div class="symptom-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3>Dolor Abdominal Agudo</h3>
+            <p>Dolor repentino, severo o persistente, especialmente si comienza en el ombligo y se desplaza hacia la parte inferior derecha del abdomen (posible apendicitis).</p>
+          </div>
+          
+          <div class="symptom-card">
+            <div class="symptom-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Intolerancia a la Grasa y Cólicos</h3>
+            <p>Dolor agudo debajo de las costillas derechas, inflamación o náuseas tras consumir alimentos altos en grasa. Síntoma clásico de cálculos en la vesícula biliar.</p>
+          </div>
+          
+          <div class="symptom-card">
+            <div class="symptom-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+            </div>
+            <h3>Bultos o Hernias</h3>
+            <p>Protuberancias visibles en la ingle, el ombligo o en cicatrices previas que aumentan de tamaño o duelen al hacer esfuerzos físicos, toser o levantar peso.</p>
+          </div>
+          
+          <div class="symptom-card">
+            <div class="symptom-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.3 8.11a10 10 0 1 0-3.41 3.41L22 16l-3.41-3.41A10 10 0 0 0 21.3 8.11z"/></svg>
+            </div>
+            <h3>Lipomas y Masas de Piel</h3>
+            <p>Aparición de pequeñas protuberancias de consistencia blanda bajo la piel (lipomas) o quistes sebáceos que resultan molestos, dolorosos o se inflaman.</p>
+          </div>
+          
+          <div class="symptom-card">
+            <div class="symptom-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Reflujo Gastroesofágico Crónico</h3>
+            <p>Sensación persistente de acidez o quemadura en el pecho que no cede con antiácidos habituales, sospechando la presencia de una hernia hiatal.</p>
+          </div>
+          
+          <div class="symptom-card">
+            <div class="symptom-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+            <h3>Segunda Opinión Quirúrgica</h3>
+            <p>Evaluación y recomendación imparcial basada en experiencia cuando ya se le ha sugerido una cirugía, permitiendo evaluar la mejor alternativa de tratamiento.</p>
+          </div>
+        </div>
+
+        <!-- Sección Prudente de Síntomas de Alarma -->
+        <div class="alarm-banner">
+          <div class="alarm-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
+          </div>
+          <div class="alarm-text">
+            <strong>Aviso de Emergencia:</strong> Si presenta dolor abdominal intenso, fiebre, vómito persistente o síntomas de alarma, acuda al servicio de emergencia más cercano o comuníquese directamente por llamada.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Perfil y Trayectoria -->
+    <section id="perfil" style="background-color: #ffffff;">
+      <div class="container profile-grid">
+        <div class="profile-stats">
+          <div class="profile-stat-item">
+            <div class="profile-stat-circle">
+              <!-- Trophy SVG -->
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 2h-4v2h4v2c0 2.76-2.24 5-5 5h-4c-2.76 0-5-2.24-5-5V4h4V2H5c-1.1 0-2 .9-2 2v2c0 3.52 2.61 6.43 6 6.92V18H7v2h10v-2h-2v-3.08c3.39-.49 6-3.4 6-6.92V4c0-1.1-.9-2-2-2zM6 6H5V4h1v2zm13 0h-1V4h1v2z"/></svg>
+            </div>
+            <div class="profile-stat-text">
+              <strong>Presidente Ejecutivo y Fundador</strong>
+              <span>Hospital Clínico San Juan de Dios en Cuenca</span>
+            </div>
+          </div>
+          <div class="profile-stat-item">
+            <div class="profile-stat-circle">
+              <!-- Heart/Activity SVG -->
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </div>
+            <div class="profile-stat-text">
+              <strong>Ex Médico Tratante Principal</strong>
+              <span>Dpto. de Cirugía en Hosp. Vicente Corral Moscoso</span>
+            </div>
+          </div>
+          <div class="profile-stat-item">
+            <div class="profile-stat-circle">
+              <!-- BookOpen SVG -->
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 11.55C9.64 9.35 6.48 8 3 8v11c3.48 0 6.64 1.35 9 3.55 2.36-2.2 5.52-3.55 9-3.55V8c-3.48 0-6.64 1.35-9 3.55zM12 8c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3z"/></svg>
+            </div>
+            <div class="profile-stat-text">
+              <strong>Docente y Director de Posgrado</strong>
+              <span>Especialidad de Cirugía en Universidad de Cuenca</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-text-content">
+          <span class="section-subtitle">Sobre el Dr. Vintimilla</span>
+          <h2 class="section-title" style="margin-bottom: 20px;">Trayectoria en Cirugía General y Laparoscópica en Cuenca</h2>
+          <p>La toma de decisiones en el ámbito de la cirugía requiere no solo conocimientos técnicos actualizados, sino también la sensatez que aporta la práctica constante. Como <strong>Doctor en Medicina y Cirugía graduado de la Universidad de Cuenca (1987)</strong> y especialista en <strong>cirugía general en Cuenca</strong> con una carrera firmemente asentada, el Dr. Raúl Marcelo Vintimilla Ávila ha dedicado más de tres décadas a velar por la salud quirúrgica de sus pacientes. Si necesita programar una consulta con un cirujano en Cuenca, recibirá una valoración basada en criterios de ética y seguridad médica.</p>
+          <p>Como miembro, médico fundador y <strong>Presidente Ejecutivo</strong> del <strong>Hospital Clínico San Juan de Dios</strong>, contribuyó a establecer una de las instituciones de salud privadas más prestigiosas de la región. Su experiencia en el sector público como médico tratante en el Hospital Vicente Corral Moscoso le ha provisto de la habilidad necesaria para resolver diagnósticos difíciles con gran solvencia y estricto criterio clínico.</p>
+          
+          <ul class="profile-checklist">
+            <li class="profile-checklist-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Título de Médico Cirujano (Universidad de Cuenca)
+            </li>
+            <li class="profile-checklist-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Técnicas avanzadas laparoscópicas
+            </li>
+            <li class="profile-checklist-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Instalaciones equipadas para su seguridad
+            </li>
+            <li class="profile-checklist-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Trato y seguimiento personalizado
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Servicios y Procedimientos -->
+    <section class="bg-light-sec" id="servicios">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 60px;">
+          <span class="section-subtitle">Especialidades</span>
+          <h2 class="section-title">Servicios de Cirugía General y Laparoscópica en Cuenca</h2>
+        </div>
+
+        <div class="services-grid">
+          <!-- Columna: Cirugía Laparoscópica (Featured style) -->
+          <div class="services-column featured">
+            <h3 class="services-column-title">
+              <!-- Star SVG -->
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              Cirugía Laparoscópica (Mínima Invasión)
+            </h3>
+            
+            <div class="service-list">
+              <div class="service-card">
+                <h4>Colecistectomía Laparoscópica <span class="service-tag">Frecuente</span></h4>
+                <p>Extracción de la vesícula biliar por presencia de cálculos (piedras) mediante incisiones milimétricas. Ofrece menor dolor postoperatorio, menor cicatriz y rápida alta clínica tras una <strong>cirugía laparoscópica en Cuenca</strong> con tecnología laparoscópica moderna.</p>
+              </div>
+              <div class="service-card">
+                <h4>Hernioplastia Laparoscópica <span class="service-tag">Avanzada</span></h4>
+                <p>Reparación de hernias inguinales o de la pared abdominal mediante laparoscopía con la colocación de mallas biocompatibles de alta resistencia para evitar la reaparición.</p>
+              </div>
+              <div class="service-card">
+                <h4>Apendicectomía Laparoscópica <span class="service-tag">Urgencia</span></h4>
+                <p>Procedimiento especializado de <strong>cirugía laparoscópica en Cuenca</strong> para extraer el apéndice inflamado en cuadros de apendicitis aguda, previniendo peritonitis y minimizando el tiempo de recuperación.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna: Cirugía Convencional (Standard style) -->
+          <div class="services-column standard">
+            <h3 class="services-column-title">
+              <!-- Activity SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              Cirugía Convencional y Procedimientos
+            </h3>
+            
+            <div class="service-list">
+              <div class="service-card">
+                <h4>Extirpación de Lipomas y Quistes</h4>
+                <p>Retiro quirúrgico ambulatorio de masas benignas de grasa (lipomas), quistes sebáceos o pequeños tumores de piel bajo anestesia local en una sesión corta y segura dentro de la práctica de <strong>cirugía general en Cuenca</strong>.</p>
+              </div>
+              <div class="service-card">
+                <h4>Reparación de Hernia Convencional</h4>
+                <p>Corrección quirúrgica de hernias umbilicales, epigástricas o inguinales grandes mediante técnica tradicional, ideal según la valoración física y anatomía de cada paciente.</p>
+              </div>
+              <div class="service-card">
+                <h4>Reconstrucción de Pared Abdominal</h4>
+                <p>Cirugía reparadora de eventraciones (hernias surgidas en cicatrices de operaciones antiguas) para devolver la fuerza, estabilidad y función a la musculatura del abdomen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Proceso de Atención -->
+    <section id="proceso">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 50px;">
+          <span class="section-subtitle">El Proceso</span>
+          <h2 class="section-title">Su salud quirúrgica en 4 pasos claros y seguros</h2>
+        </div>
+
+        <div class="process-timeline">
+          <div class="process-step">
+            <div class="process-number">1</div>
+            <h3>Consulta de Valoración</h3>
+            <p>Se realiza una exploración física detallada, se analizan exámenes previos o ecografías, y se le explica en un lenguaje comprensible y humano su diagnóstico real.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="process-number">2</div>
+            <h3>Planificación Quirúrgica</h3>
+            <p>Si requiere ser intervenido por un <strong>cirujano laparoscopista en Cuenca</strong>, definimos la técnica idónea, programamos el preoperatorio y coordinamos la reserva de quirófano en el Hospital San Juan de Dios.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="process-number">3</div>
+            <h3>La Intervención</h3>
+            <p>La cirugía se efectúa bajo estrictos protocolos internacionales de bioseguridad, utilizando instrumental laparoscópico moderno y con anestesiólogos certificados.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="process-number">4</div>
+            <h3>Recuperación Asistida</h3>
+            <p>Le indicamos el tratamiento postoperatorio exacto y realizamos controles presenciales para asegurar que los tejidos cicatricen de manera óptima y recupere su bienestar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Preguntas Frecuentes (FAQ) - Minimalista -->
+    <section class="bg-light-sec" id="faq">
+      <div class="container">
+        <div class="section-header" style="margin-left: auto; margin-right: auto; text-align: center;">
+          <span class="section-subtitle">FAQ</span>
+          <h2 class="section-title">Preguntas Frecuentes</h2>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-header" aria-expanded="false">
+              ¿Cuáles son los beneficios de la cirugía laparoscópica frente a la abierta?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Al realizarse mediante microincisiones, el daño a la pared muscular es mínimo. Esto se traduce en muchísimo menos dolor después de la operación, cicatrices casi invisibles con el tiempo, menor riesgo de infecciones de la herida y, principalmente, un retorno mucho más rápido a sus actividades cotidianas (generalmente en una semana).
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-header" aria-expanded="false">
+              ¿En qué hospital se realizan los procedimientos y cirugías?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                El Dr. Raúl Marcelo Vintimilla realiza todas sus intervenciones mayores en el <strong>Hospital Clínico San Juan de Dios</strong> (Cuenca). Esto garantiza el acceso directo a terapia intensiva, laboratorios clínicos 24/7, quirófanos completamente dotados de tecnología moderna y personal de enfermería y soporte médico calificado.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-header" aria-expanded="false">
+              ¿El doctor atiende o coordina cirugías con seguros de salud privados?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Sí. Aunque la atención es privada, el Dr. Vintimilla le proporcionará todos los formularios correspondientes de su aseguradora debidamente llenados, el informe médico detallado y la factura autorizada para que pueda tramitar con éxito el reembolso de los gastos quirúrgicos.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-header" aria-expanded="false">
+              ¿Cómo debo prepararme para mi primera consulta de valoración?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Es muy útil que traiga consigo exámenes de laboratorio recientes, ecografías abdominales u otros estudios de imagen que se haya realizado. También anote los nombres de los medicamentos que consume regularmente. Esto ayuda a agilizar el diagnóstico en su primera consulta.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-header" aria-expanded="false">
+              ¿Qué tiempo demora la recuperación de una cirugía de vesícula (colecistectomía)?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Con la técnica laparoscópica, el paciente suele irse a casa el mismo día o al día siguiente. Se recomienda reposo relativo durante los primeros 3 a 5 días (caminar distancias cortas está permitido y recomendado). La mayoría de personas pueden volver a un trabajo de oficina en 7 a 10 días, evitando levantar cargas pesadas por 4 semanas.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Ubicación y Contacto -->
+    <section id="ubicacion">
+      <div class="container location-grid">
+        <div class="location-info">
+          <span class="section-subtitle">Contacto</span>
+          <h2 class="section-title" style="margin-bottom: 24px;">Lugar de atención médica</h2>
+          <p class="lead" style="font-size: 1rem; margin-bottom: 32px;">Visítenos en las instalaciones médicas del Hospital San Juan de Dios en Cuenca, Ecuador. Contamos con parqueadero privado y seguridad.</p>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <!-- MapPin SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-detail">
+              <h4>Consultorio Médico</h4>
+              <p>Hospital Clínico San Juan de Dios<br />Manuel J. Calle 1-59 y Av. Paucarbamba<br />Cuenca, Ecuador</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <!-- Phone SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="contact-detail">
+              <h4>Números de Teléfono</h4>
+              <p>Llamadas consultorio: <a href="tel:+593724125046"><strong>(07) 412-5046</strong></a><br />
+              Celular para citas: <a href="tel:+593982757711"><strong>098 275 7711</strong></a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <!-- Clock SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="contact-detail">
+              <h4>Horarios de Consulta</h4>
+              <p>Lunes a Viernes: Previa Cita coordinada por teléfono o WhatsApp.</p>
+            </div>
+          </div>
+
+          <div class="location-actions">
+            <a class="btn btn-primary" href="tel:+593724125046">Llamar Ahora</a>
+            <a class="btn btn-secondary-outline" href="https://wa.me/593982757711?text=Hola%20Dr.%20Vintimilla,%20deseo%20agendar%20una%20consulta%20de%20valoración." target="_blank" rel="noopener">Agendar por WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <!-- Google Maps Iframe Real -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.697486043961!2d-79.00685652515093!3d-2.903822139626383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd19b027b40d6d%3A0x6d8593ccf9a46320!2sHospital%20San%20Juan%20de%20Dios!5e0!3m2!1ses!2sec!4v1718376543210!5m2!1ses!2sec" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación Hospital Clínico San Juan de Dios en Google Maps"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner Final CTA -->
+    <section style="padding-top: 40px;">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-content">
+            <h2>Reciba una valoración quirúrgica en Cuenca con un especialista</h2>
+            <p>No postergue su salud ni su calidad de vida. Comuníquese directamente para agendar su consulta presencial en el Hospital San Juan de Dios en Cuenca.</p>
+            <div class="cta-actions">
+              <a class="btn btn-accent" href="https://wa.me/593982757711?text=Hola%20Dr.%20Vintimilla,%20deseo%20agendar%20una%20consulta%20de%20valoración." target="_blank" rel="noopener">Agendar Cita en WhatsApp</a>
+              <a class="btn btn-secondary-outline" style="color: white; border-color: rgba(255, 255, 255, 0.4);" href="tel:+593724125046">Llamar por Teléfono</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de Página (Footer) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Dr. Raúl Marcelo Vintimilla Ávila</h3>
+          <p>Especialista en Cirugía General y Laparoscópica en la ciudad de Cuenca. Socio fundador del Hospital Clínico San Juan de Dios.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sintomas">Cuándo Consultar</a></li>
+            <li><a href="#perfil">Trayectoria</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Manuel J. Calle 1-59 y Av. Paucarbamba, Hospital San Juan de Dios, Cuenca, Ecuador</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Consultorio: <a href="tel:+593724125046">(07) 412-5046</a><br />Celular: <a href="tel:+593982757711">098 275 7711</a></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dr. Raúl Marcelo Vintimilla Ávila. Todos los derechos reservados.</p>
+        <p class="footer-legal-notice">Aviso: La información de esta página es orientativa y no reemplaza una valoración médica profesional.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón Flotante de WhatsApp -->
+  <a href="https://wa.me/593982757711?text=Hola%20Dr.%20Vintimilla,%20deseo%20agendar%20una%20consulta%20de%20valoración." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escribir al Dr. Vintimilla por WhatsApp">
+    <!-- WhatsApp SVG Icon -->
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.488 1.459 5.416 1.46h.007c5.811 0 10.536-4.729 10.54-10.544.003-2.817-1.092-5.466-3.08-7.456C17.48 2.624 14.835 1.528 12.01 1.528c-5.817 0-10.543 4.731-10.548 10.547-.001 1.933.504 3.824 1.464 5.433l-.962 3.513 3.606-.945zm11.388-7.794c-.308-.154-1.82-.9-2.102-1.002-.283-.103-.488-.154-.693.154-.206.308-.797 1.002-.977 1.207-.18.206-.36.231-.668.077-.308-.154-1.3-.48-2.477-1.53-1.155-1.03-1.936-2.302-2.162-2.61-.226-.308-.024-.475.13-.628.138-.138.308-.36.462-.54.154-.18.206-.308.308-.514.103-.206.051-.385-.026-.54-.077-.154-.693-1.67-.95-2.29-.25-.6-.524-.52-.72-.53-.188-.01-.403-.01-.617-.01-.214 0-.564.08-.86.402-.296.322-1.13 1.102-1.13 2.69 0 1.587 1.156 3.12 1.316 3.326.16.206 2.274 3.473 5.508 4.872.77.332 1.37.531 1.838.68.775.246 1.48.212 2.037.129.62-.093 1.82-.745 2.078-1.464.256-.718.256-1.334.18-1.463-.077-.13-.283-.206-.59-.36z"/></svg>
+  </a>
+
+  <!-- Barra de contacto inferior fija en móviles -->
+  <div class="mobile-contact-bar">
+    <div class="mobile-contact-grid">
+      <a class="btn btn-secondary" href="tel:+593724125046">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Llamar
+      </a>
+      <a class="btn btn-accent" href="https://wa.me/593982757711?text=Hola%20Dr.%20Vintimilla,%20deseo%20agendar%20una%20consulta%20de%20valoración." target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.488 1.459 5.416 1.46h.007c5.811 0 10.536-4.729 10.54-10.544.003-2.817-1.092-5.466-3.08-7.456C17.48 2.624 14.835 1.528 12.01 1.528c-5.817 0-10.543 4.731-10.548 10.547-.001 1.933.504 3.824 1.464 5.433l-.962 3.513 3.606-.945zm11.388-7.794c-.308-.154-1.82-.9-2.102-1.002-.283-.103-.488-.154-.693.154-.206.308-.797 1.002-.977 1.207-.18.206-.36.231-.668.077-.308-.154-1.3-.48-2.477-1.53-1.155-1.03-1.936-2.302-2.162-2.61-.226-.308-.024-.475.13-.628.138-.138.308-.36.462-.54.154-.18.206-.308.308-.514.103-.206.051-.385-.026-.54-.077-.154-.693-1.67-.95-2.29-.25-.6-.524-.52-.72-.53-.188-.01-.403-.01-.617-.01-.214 0-.564.08-.86.402-.296.322-1.13 1.102-1.13 2.69 0 1.587 1.156 3.12 1.316 3.326.16.206 2.274 3.473 5.508 4.872.77.332 1.37.531 1.838.68.775.246 1.48.212 2.037.129.62-.093 1.82-.745 2.078-1.464.256-.718.256-1.334.18-1.463-.077-.13-.283-.206-.59-.36z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Lógica del menú móvil (Hamburguesa)
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+      
+      if (isOpen) {
+        menuToggle.children[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        menuToggle.children[1].style.opacity = '0';
+        menuToggle.children[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+      } else {
+        menuToggle.children[0].style.transform = 'none';
+        menuToggle.children[1].style.opacity = '1';
+        menuToggle.children[2].style.transform = 'none';
+      }
+    });
+
+    // Cerrar menú al hacer clic en un enlace (móvil)
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navMenu.classList.contains('open')) {
+          navMenu.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.children[0].style.transform = 'none';
+          menuToggle.children[1].style.opacity = '1';
+          menuToggle.children[2].style.transform = 'none';
+        }
+      });
+    });
+
+    // Acordeón interactivo para Preguntas Frecuentes (FAQ)
+    const faqHeaders = document.querySelectorAll('.faq-header');
+    
+    faqHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        document.querySelectorAll('.faq-item').forEach(faqItem => {
+          faqItem.classList.remove('active');
+          faqItem.querySelector('.faq-header').setAttribute('aria-expanded', 'false');
+        });
+        
+        if (!isActive) {
+          item.classList.add('active');
+          header.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

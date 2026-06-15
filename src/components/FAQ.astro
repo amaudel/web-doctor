@@ -1,0 +1,97 @@
+---
+---
+<!-- Sección: Preguntas Frecuentes (FAQ) - Minimalista -->
+<section class="bg-light-sec" id="faq">
+  <div class="container">
+    <div class="section-header" style="margin-left: auto; margin-right: auto; text-align: center;">
+      <span class="section-subtitle">FAQ</span>
+      <h2 class="section-title">Preguntas Frecuentes</h2>
+    </div>
+
+    <div class="faq-container">
+      <div class="faq-item">
+        <button class="faq-header" aria-expanded="false">
+          ¿Cuáles son los beneficios de la cirugía laparoscópica frente a la abierta?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            Al realizarse mediante microincisiones, el daño a la pared muscular es mínimo. Esto se traduce en muchísimo menos dolor después de la operación, cicatrices casi invisibles con el tiempo, menor riesgo de infecciones de la herida y, principalmente, un retorno mucho más rápido a sus actividades cotidianas (generalmente en una semana).
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-header" aria-expanded="false">
+          ¿En qué hospital se realizan los procedimientos y cirugías?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            El Dr. Raúl Marcelo Vintimilla realiza todas sus intervenciones mayores en el <strong>Hospital Clínico San Juan de Dios</strong> (Cuenca). Esto garantiza el acceso directo a terapia intensiva, laboratorios clínicos 24/7, quirófanos completamente dotados de tecnología moderna y personal de enfermería y soporte médico calificado.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-header" aria-expanded="false">
+          ¿El doctor atiende o coordina cirugías con seguros de salud privados?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            Sí. Aunque la atención es privada, el Dr. Vintimilla le proporcionará todos los formularios correspondientes de su aseguradora debidamente llenados, el informe médico detallado y la factura autorizada para que pueda tramitar con éxito el reembolso de los gastos quirúrgicos.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-header" aria-expanded="false">
+          ¿Cómo debo prepararme para mi primera consulta de valoración?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            Es muy útil que traiga consigo exámenes de laboratorio recientes, ecografías abdominales u otros estudios de imagen que se haya realizado. También anote los nombres de los medicamentos que consume regularmente. Esto ayuda a agilizar el diagnóstico en su primera consulta.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-header" aria-expanded="false">
+          ¿Qué tiempo demora la recuperación de una cirugía de vesícula (colecistectomía)?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            Con la técnica laparoscópica, el paciente suele irse a casa el mismo día o al día siguiente. Se recomienda reposo relativo durante los primeros 3 a 5 días (caminar distancias cortas está permitido y recomendado). La mayoría de personas pueden volver a un trabajo de oficina en 7 a 10 días, evitando levantar cargas pesadas por 4 semanas.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Acordeón interactivo para Preguntas Frecuentes (FAQ)
+  const faqHeaders = document.querySelectorAll('.faq-header');
+  
+  faqHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.parentElement;
+      if (!item) return;
+      const isActive = item.classList.contains('active');
+      
+      document.querySelectorAll('.faq-item').forEach(faqItem => {
+        faqItem.classList.remove('active');
+        const h = faqItem.querySelector('.faq-header');
+        if (h) h.setAttribute('aria-expanded', 'false');
+      });
+      
+      if (!isActive) {
+        item.classList.add('active');
+        header.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
