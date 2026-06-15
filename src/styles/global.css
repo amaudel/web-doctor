@@ -218,8 +218,9 @@
       display: none;
       flex-direction: column;
       justify-content: space-between;
-      width: 24px;
-      height: 18px;
+      width: 44px;
+      height: 44px;
+      padding: 13px 10px; /* Area activa centrada de 24x18px dentro de caja táctil de 44x44px */
       background: transparent;
       border: none;
       cursor: pointer;
@@ -1389,12 +1390,16 @@
         display: flex;
       }
 
+      .nav {
+        min-height: 70px;
+      }
+
       .menu {
         position: fixed;
-        top: 80px;
+        top: 70px;
         left: 0;
         width: 100%;
-        height: calc(100vh - 80px);
+        height: calc(100vh - 70px);
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -1450,16 +1455,48 @@
         padding-bottom: 120px; 
       }
 
+      /* Ocultar WhatsApp flotante duplicado en móviles ya que tenemos la barra fija */
       .whatsapp-float {
-        bottom: 100px; 
-        right: 20px;
-        width: 50px;
-        height: 50px;
+        display: none !important;
       }
 
-      .whatsapp-float svg {
-        width: 24px;
-        height: 24px;
+      /* badges del hero reorganizados para evitar textos apretados en móvil */
+      .badges {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        max-width: 340px;
+        margin: 0 auto 24px;
+      }
+
+      .badge {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 16px;
+        border-top: none;
+        border-left: 3px solid var(--primary);
+      }
+
+      .badge strong {
+        font-size: 1.15rem;
+        margin-bottom: 0;
+      }
+
+      .badge span {
+        font-size: 0.82rem;
+        text-align: right;
+      }
+
+      /* Reducir altura del mapa de ubicación en móvil */
+      .map-container, .map-container iframe {
+        min-height: 300px;
+        height: 300px;
+      }
+
+      /* Compactar padding del acordeón de FAQ en móviles */
+      .faq-header {
+        padding: 18px 0;
+        font-size: 1.05rem;
       }
       
       section {
