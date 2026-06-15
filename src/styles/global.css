@@ -648,6 +648,19 @@
       overflow: hidden;
     }
 
+    .stats-card-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #38bdf8;
+      margin-top: -8px;
+      margin-bottom: 28px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-family: 'Outfit', sans-serif;
+    }
+
     .profile-stats::before {
       content: '';
       position: absolute;
@@ -742,17 +755,27 @@
     .profile-checklist-item {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       font-size: 0.95rem;
       color: var(--text-dark);
       font-weight: 500;
     }
 
-    .profile-checklist-item svg {
-      width: 16px;
-      height: 16px;
-      color: var(--accent);
+    .checklist-icon-wrapper {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: var(--accent-light);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
+    }
+
+    .checklist-icon-wrapper svg {
+      width: 14px;
+      height: 14px;
+      color: var(--accent);
     }
 
     /* Sección: Servicios y Procedimientos */
@@ -1831,25 +1854,26 @@
 
     /* Credenciales en Perfil (Inspiración Andrew Jacono) */
     .profile-credentials {
-      margin-top: 36px;
+      margin-top: 56px;
       border-top: 1px solid var(--border);
-      padding-top: 32px;
+      padding-top: 48px;
     }
 
     .credentials-title {
       font-family: 'Outfit', sans-serif;
       font-size: 1.12rem;
       color: var(--primary-dark);
-      margin-bottom: 20px;
+      margin-bottom: 28px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      text-align: center;
     }
 
     .credentials-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
     }
 
     .credential-card-badge {
@@ -1910,7 +1934,13 @@
       display: block;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
+      .credentials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
       .credentials-grid {
         grid-template-columns: 1fr;
       }
