@@ -89,6 +89,7 @@
     .brand { 
       display: flex;
       flex-direction: column;
+      flex: 1;
     }
     
     .brand-name {
@@ -147,7 +148,9 @@
     .nav-actions {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       gap: 12px;
+      flex: 1;
     }
 
     /* Botones */
@@ -1420,7 +1423,7 @@
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       /* Estilos para el menú móvil */
       .menu-toggle {
         display: flex;
@@ -1469,7 +1472,9 @@
       .nav-actions {
         display: none; 
       }
+    }
 
+    @media (max-width: 768px) {
       .symptom-grid, .process-timeline {
         grid-template-columns: 1fr;
       }
