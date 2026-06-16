@@ -38,12 +38,24 @@
   html.js-animations .hero-actions .btn,
   html.js-animations .hero .badge,
   html.js-animations .hero-card img,
-  html.js-animations .hero-card-tag {
+  html.js-animations .hero-card-tag,
+  /* Artículos de blog */
+  html.js-animations .back-link,
+  html.js-animations .article-header > *,
+  html.js-animations .article-cover,
+  html.js-animations .article-body > *,
+  html.js-animations .article-footer-cta {
     opacity: 0;
     transform: translateY(15px);
   }
   html.js-animations .hero-card img {
     transform: scale(1.03);
+  }
+  html.js-animations .back-link {
+    transform: translateX(-15px);
+  }
+  html.js-animations .article-cover {
+    transform: scale(1.02);
   }
 
 
