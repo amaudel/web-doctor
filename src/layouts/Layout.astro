@@ -24,6 +24,14 @@ const canonicalUrl = `https://dr-vintimilla-landing.vercel.app${canonicalPath}`;
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
+  <script is:inline>
+    // Detectar si las animaciones están soportadas y no reducidas
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js-animations');
+    }
+  </script>
+
+  
   <!-- SEO Local Optimizado -->
   <title>{title}</title>
   <meta name="description" content={description} />
