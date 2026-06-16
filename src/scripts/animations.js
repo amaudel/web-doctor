@@ -19,17 +19,17 @@ if (!prefersReducedMotion) {
     // 1. Animación del Hero (Carga Inicial y Parallax)
     if (document.querySelector(".hero")) {
       const heroTl = gsap.timeline();
-      // Zoom lento de entrada del fondo
-      heroTl.fromTo(".hero-bg", { scale: 1.08 }, { scale: 1, duration: 2.2, ease: "power2.out" }, 0)
-        .to(".hero .eyebrow", { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, "-=1.8")
-        .to(".hero h1", { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, "-=1.5")
-        .to(".hero .lead", { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, "-=1.5")
-        .to(".hero-actions .btn", { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", stagger: 0.15 }, "-=1.4")
-        .to(".hero .badge", { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", stagger: 0.12 }, "-=1.3")
-        .to(".hero-card img", { opacity: 1, scale: 1, duration: 1.2, ease: "power3.out" }, "-=1.2")
-        .to(".hero-card-tag", { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, "-=0.6");
+      // Zoom lento cinematográfico y fade-in de entrada del fondo
+      heroTl.fromTo(".hero-bg", { scale: 1.15, opacity: 0 }, { scale: 1, opacity: 1, duration: 2.8, ease: "power2.out" }, 0)
+        .to(".hero .eyebrow", { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, "-=2.4")
+        .to(".hero h1", { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, "-=2.1")
+        .to(".hero .lead", { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, "-=2.1")
+        .to(".hero-actions .btn", { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", stagger: 0.15 }, "-=2.0")
+        .to(".hero .badge", { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", stagger: 0.12 }, "-=1.9")
+        .to(".hero-card img", { opacity: 1, scale: 1, duration: 1.2, ease: "power3.out" }, "-=1.8")
+        .to(".hero-card-tag", { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, "-=1.2");
 
-      // Parallax suave al hacer scroll
+      // Parallax suave al hacer scroll (sin mostrar bordes vacíos gracias al 120% de altura de .hero-bg)
       gsap.to(".hero-bg", {
         scrollTrigger: {
           trigger: ".hero",
@@ -37,7 +37,7 @@ if (!prefersReducedMotion) {
           end: "bottom top",
           scrub: true
         },
-        y: "20%",
+        yPercent: 12,
         ease: "none"
       });
     }
@@ -306,14 +306,14 @@ if (!prefersReducedMotion) {
     // Solo animamos el Hero en la carga inicial de forma muy suave y simplificada.
     if (document.querySelector(".hero")) {
       const heroTl = gsap.timeline();
-      // Zoom de entrada más suave en móvil
-      heroTl.fromTo(".hero-bg", { scale: 1.05 }, { scale: 1, duration: 1.8, ease: "power2.out" }, 0)
-        .to(".hero .eyebrow", { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, "-=1.4")
-        .to(".hero h1", { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, "-=1.2")
-        .to(".hero .lead", { opacity: 1, duration: 0.7, ease: "power3.out" }, "-=1.2")
-        .to(".hero-actions .btn", { opacity: 1, y: 0, duration: 0.5, ease: "power3.out", stagger: 0.1 }, "-=1.1")
-        .to(".hero .badge", { opacity: 1, duration: 0.5, ease: "power3.out", stagger: 0.08 }, "-=1.0")
-        .to(".hero-card img", { opacity: 1, duration: 1.0, ease: "power3.out" }, "-=0.8");
+      // Zoom de entrada suave y fade-in en móvil
+      heroTl.fromTo(".hero-bg", { scale: 1.10, opacity: 0 }, { scale: 1, opacity: 1, duration: 2.2, ease: "power2.out" }, 0)
+        .to(".hero .eyebrow", { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, "-=1.8")
+        .to(".hero h1", { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, "-=1.6")
+        .to(".hero .lead", { opacity: 1, duration: 0.7, ease: "power3.out" }, "-=1.6")
+        .to(".hero-actions .btn", { opacity: 1, y: 0, duration: 0.5, ease: "power3.out", stagger: 0.1 }, "-=1.5")
+        .to(".hero .badge", { opacity: 1, duration: 0.5, ease: "power3.out", stagger: 0.08 }, "-=1.4")
+        .to(".hero-card img", { opacity: 1, duration: 1.0, ease: "power3.out" }, "-=1.2");
     }
 
     // Animación simplificada de carga para los artículos en móviles
