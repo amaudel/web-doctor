@@ -25,7 +25,9 @@ if (!prefersReducedMotion) {
         .to(".hero h1", { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, "-=1.5")
         .to(".hero .lead", { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, "-=1.5")
         .to(".hero-actions .btn", { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", stagger: 0.15 }, "-=1.4")
-        .to(".hero .badge", { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", stagger: 0.12 }, "-=1.3");
+        .to(".hero .badge", { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", stagger: 0.12 }, "-=1.3")
+        .to(".hero-card img", { opacity: 1, scale: 1, duration: 1.2, ease: "power3.out" }, "-=1.2")
+        .to(".hero-card-tag", { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, "-=0.6");
 
       // Parallax suave al hacer scroll
       gsap.to(".hero-bg", {
@@ -310,7 +312,8 @@ if (!prefersReducedMotion) {
         .to(".hero h1", { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, "-=1.2")
         .to(".hero .lead", { opacity: 1, duration: 0.7, ease: "power3.out" }, "-=1.2")
         .to(".hero-actions .btn", { opacity: 1, y: 0, duration: 0.5, ease: "power3.out", stagger: 0.1 }, "-=1.1")
-        .to(".hero .badge", { opacity: 1, duration: 0.5, ease: "power3.out", stagger: 0.08 }, "-=1.0");
+        .to(".hero .badge", { opacity: 1, duration: 0.5, ease: "power3.out", stagger: 0.08 }, "-=1.0")
+        .to(".hero-card img", { opacity: 1, duration: 1.0, ease: "power3.out" }, "-=0.8");
     }
 
     // Animación simplificada de carga para los artículos en móviles

@@ -1,6 +1,7 @@
 ---
-import { getImage } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import hospitalBg from '../assets/hospital_bg.jpg';
+import doctorPortrait from '../assets/doctor_portrait.jpg';
 
 // Optimizar la imagen de fondo en formato webp con Astro Assets
 const optimizedBg = await getImage({
@@ -56,6 +57,20 @@ const optimizedBg = await getImage({
       </div>
     </div>
     
-    <div class="hero-spacer"></div>
+    <div class="hero-card">
+      <div class="hero-img-container">
+        <Image src={doctorPortrait} alt="Dr. Raúl Marcelo Vintimilla Ávila, cirujano general en Cuenca y cirujano laparoscopista en Cuenca" width={400} height={500} loading="eager" decoding="async" format="webp" />
+      </div>
+      <div class="hero-card-tag">
+        <div class="hero-card-tag-icon">
+          <!-- Shield Check SVG -->
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        </div>
+        <div class="hero-card-tag-text">
+          <strong>Práctica Médica Ética</strong>
+          <span>Seguridad en cada cirugía</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
