@@ -157,12 +157,16 @@ if (!prefersReducedMotion) {
         toggleActions: "play none none none"
       }
     });
-    ubicacionTl.fromTo("#ubicacion .location-info",
+    ubicacionTl.fromTo("#ubicacion .section-header",
       { opacity: 0, y: 30 },
       { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
-    ).fromTo("#ubicacion .map-container",
+    ).fromTo("#ubicacion .location-card",
       { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" },
+      { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: "power3.out" },
+      "-=0.5"
+    ).fromTo("#ubicacion .location-ctas, #ubicacion .location-map-wrapper",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: "power3.out" },
       "-=0.6"
     );
 

@@ -1100,85 +1100,143 @@
     /* Sección: Ubicación y Contacto */
     .location-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.15fr 0.85fr;
       gap: 48px;
       align-items: start;
     }
 
-    .location-info {
+    .location-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .location-card {
       background: white;
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 48px;
-      box-shadow: var(--shadow-premium);
-    }
-
-    .contact-item {
+      border-radius: var(--radius-md);
+      padding: 24px;
       display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      margin-bottom: 24px;
+      gap: 20px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                  box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                  border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .contact-item:last-of-type {
-      margin-bottom: 0;
+    .location-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(15, 98, 146, 0.2);
     }
 
-    .contact-icon {
-      width: 44px;
-      height: 44px;
+    .location-card.highlight {
+      background: linear-gradient(180deg, var(--primary-light) 0%, rgba(243, 248, 252, 0.5) 100%);
+      border-color: rgba(15, 98, 146, 0.15);
+    }
+
+    .location-card-icon {
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       background: var(--primary-light);
       color: var(--primary);
       display: grid;
       place-items: center;
       flex-shrink: 0;
+      transition: transform 0.3s ease;
     }
 
-    .contact-icon svg {
-      width: 20px;
-      height: 20px;
+    .location-card:hover .location-card-icon {
+      transform: scale(1.05) rotate(3deg);
     }
 
-    .contact-detail h4 {
+    .location-card.highlight .location-card-icon {
+      background: rgba(15, 98, 146, 0.1);
+    }
+
+    .location-card-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .location-card-content h3 {
       font-family: 'Outfit', sans-serif;
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: var(--primary-dark);
-      margin-bottom: 4px;
+      margin-bottom: 8px;
       font-weight: 700;
+      line-height: 1.3;
     }
 
-    .contact-detail p, .contact-detail a {
+    .location-card-content p {
       font-size: 0.95rem;
       color: var(--text-muted);
       line-height: 1.6;
+      margin: 0;
     }
 
-    .contact-detail a:hover {
+    .location-card-content a {
       color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s ease;
     }
 
-    .location-actions {
+    .location-card-content a:hover {
+      color: var(--primary-hover);
+      text-decoration: underline;
+    }
+
+    .location-ctas {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .location-map-wrapper {
       display: flex;
-      gap: 14px;
-      margin-top: 32px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 20px;
     }
 
     .map-container {
-      height: 100%;
-      min-height: 520px;
-      border-radius: var(--radius-lg);
+      height: 420px;
+      border-radius: var(--radius-md);
       overflow: hidden;
       border: 1px solid var(--border);
-      box-shadow: var(--shadow-lg);
+      box-shadow: var(--shadow-sm);
     }
 
     .map-container iframe {
       width: 100%;
       height: 100%;
-      min-height: 520px;
       display: block;
+    }
+
+    .navigation-actions {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .navigation-label {
+      display: block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+
+    .navigation-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
     }
 
     /* CTA Box */
@@ -1635,12 +1693,24 @@
         padding: 48px 24px;
       }
       
-      .location-info {
-        padding: 32px 24px;
+      .location-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
       }
 
-      .location-actions {
-        flex-direction: column;
+      .location-card {
+        padding: 20px;
+        gap: 16px;
+      }
+
+      .location-ctas {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .navigation-buttons {
+        grid-template-columns: 1fr;
+        gap: 12px;
       }
       
       .alarm-banner {
