@@ -11,7 +11,7 @@ if (!prefersReducedMotion) {
   // Configuración de matchMedia para animaciones adaptativas
   const mm = gsap.matchMedia();
 
-  // --- CONFIGURACIÓN DE ESCRITORIO (Pantallas > 768px) ---
+  // --- CONFIGURACIÓN DE ESCRITORIO & TABLETS (> 768px) ---
   mm.add("(min-width: 769px)", () => {
     // 1. Animación del Hero (Carga Inicial)
     const heroTl = gsap.timeline();
@@ -24,136 +24,170 @@ if (!prefersReducedMotion) {
       .to(".hero-card img", { opacity: 1, scale: 1, duration: 1.2, ease: "power3.out" }, "-=1.2")
       .to(".hero-card-tag", { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, "-=0.6");
 
-    // 2. Transiciones de Sección al hacer Scroll
-    gsap.utils.toArray("section:not(#inicio)").forEach((section) => {
-      gsap.from(section, {
-        scrollTrigger: {
-          trigger: section,
-          start: "top 85%",
-          toggleActions: "play none none none"
-        },
-        opacity: 0,
-        y: 40,
-        duration: 1.0,
-        ease: "power3.out"
-      });
-    });
-
-    // 3. Stagger de Columnas de Servicios
-    gsap.from(".services-column", {
+    // 2. Líneas de tiempo y ScrollTriggers unificados por sección
+    
+    // --- Sección: Síntomas (#sintomas) ---
+    const sintomasTl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".services-grid",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      },
-      opacity: 0,
-      y: 30,
-      duration: 0.8,
-      stagger: 0.25,
-      ease: "power3.out"
-    });
-
-    // 4. Animación de Perfil (Profile - Stats vs Texto)
-    gsap.from(".profile-stats", {
-      scrollTrigger: {
-        trigger: ".profile-grid",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      },
-      opacity: 0,
-      scale: 0.98,
-      y: 30,
-      duration: 1.0,
-      ease: "power3.out"
-    });
-
-    gsap.from(".profile-text-content", {
-      scrollTrigger: {
-        trigger: ".profile-grid",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      },
-      opacity: 0,
-      y: 30,
-      duration: 1.0,
-      ease: "power3.out"
-    });
-
-    // Stagger para las credenciales en el perfil
-    gsap.from(".credential-card-badge", {
-      scrollTrigger: {
-        trigger: ".profile-credentials",
+        trigger: "#sintomas",
         start: "top 85%",
         toggleActions: "play none none none"
-      },
-      opacity: 0,
-      y: 20,
-      duration: 0.8,
-      stagger: 0.12,
-      ease: "power3.out"
+      }
     });
+    sintomasTl.fromTo("#sintomas .section-header", 
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
+    ).fromTo("#sintomas .symptom-card, #sintomas .alarm-banner",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: "power3.out" },
+      "-=0.5"
+    );
 
-    // 5. Stagger de Tarjetas de Testimonios
-    gsap.from(".testimonial-card", {
+    // --- Sección: Servicios (#servicios) ---
+    const serviciosTl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".testimonials-grid",
-        start: "top 80%",
+        trigger: "#servicios",
+        start: "top 85%",
         toggleActions: "play none none none"
-      },
-      opacity: 0,
-      y: 30,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: "power3.out"
+      }
     });
+    serviciosTl.fromTo("#servicios .section-header",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
+    ).fromTo("#servicios .services-column",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, stagger: 0.2, ease: "power3.out" },
+      "-=0.5"
+    );
 
-    // 6. Stagger de Tarjetas Educativas (Blog)
-    gsap.from(".education-card", {
+    // --- Sección: Proceso (#proceso) ---
+    const procesoTl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".education-grid",
-        start: "top 80%",
+        trigger: "#proceso",
+        start: "top 85%",
         toggleActions: "play none none none"
-      },
-      opacity: 0,
-      y: 30,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: "power3.out"
+      }
     });
+    procesoTl.fromTo("#proceso .section-header",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
+    ).fromTo("#proceso .process-step",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: "power3.out" },
+      "-=0.5"
+    );
 
-    // 7. Entrada de Preguntas Frecuentes (FAQ)
-    gsap.from(".faq-item", {
+    // --- Sección: Perfil (#perfil) ---
+    const perfilTl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".faq-list",
-        start: "top 80%",
+        trigger: "#perfil",
+        start: "top 85%",
         toggleActions: "play none none none"
-      },
-      opacity: 0,
-      y: 20,
-      duration: 0.8,
-      stagger: 0.1,
-      ease: "power3.out"
+      }
     });
+    perfilTl.fromTo("#perfil .profile-stats",
+      { opacity: 0, scale: 0.98, y: 30 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.8, ease: "power3.out" }
+    ).fromTo("#perfil .profile-text-content",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" },
+      "-=0.6"
+    ).fromTo("#perfil .credential-card-badge",
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: "power3.out" },
+      "-=0.4"
+    );
 
-    // 8. Entrada del CTA Final
-    gsap.from(".cta-content > *", {
+    // --- Sección: Testimonios (#testimonios) ---
+    const testimoniosTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#testimonios",
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    });
+    testimoniosTl.fromTo("#testimonios .section-header",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
+    ).fromTo("#testimonios .testimonial-card",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: "power3.out" },
+      "-=0.5"
+    );
+
+    // --- Sección: Educación y Recursos (#recursos) ---
+    const recursosTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#recursos",
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    });
+    recursosTl.fromTo("#recursos .section-header",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
+    ).fromTo("#recursos .education-card",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: "power3.out" },
+      "-=0.5"
+    );
+
+    // --- Sección: Preguntas Frecuentes (#faq) ---
+    const faqTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#faq",
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    });
+    faqTl.fromTo("#faq .section-header",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
+    ).fromTo("#faq .faq-item",
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.8, stagger: 0.08, ease: "power3.out" },
+      "-=0.5"
+    );
+
+    // --- Sección: Ubicación (#ubicacion) ---
+    const ubicacionTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#ubicacion",
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    });
+    ubicacionTl.fromTo("#ubicacion .location-info",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
+    ).fromTo("#ubicacion .map-container",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" },
+      "-=0.6"
+    );
+
+    // --- Sección: CTA Final (Sección sin ID, buscamos por .cta-banner) ---
+    const ctaTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".cta-banner",
-        start: "top 80%",
+        start: "top 85%",
         toggleActions: "play none none none"
-      },
-      opacity: 0,
-      y: 20,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power3.out"
+      }
     });
+    ctaTl.fromTo(".cta-banner",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
+    ).fromTo(".cta-content > *",
+      { opacity: 0, y: 15 },
+      { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: "power3.out" },
+      "-=0.5"
+    );
   });
 
   // --- CONFIGURACIÓN DE MÓVIL (Pantallas <= 768px) ---
   mm.add("(max-width: 768px)", () => {
-    // En móviles desactivamos ScrollTrigger para evitar saltos y tirones de rendimiento.
-    // Solo animamos los elementos del Hero en la carga inicial de forma muy suave y simplificada.
+    // En móviles desactivamos ScrollTrigger de secciones para evitar saltos de rendimiento.
+    // Solo animamos el Hero en la carga inicial de forma muy suave y simplificada.
     const heroTl = gsap.timeline();
     
     heroTl.to(".hero .eyebrow", { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" })
