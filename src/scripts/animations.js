@@ -8,6 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 if (!prefersReducedMotion) {
+  // Marcar que el script de animaciones ha iniciado correctamente
+  document.documentElement.classList.add('js-animations-started');
+
   // Configuración de matchMedia para animaciones adaptativas
   const mm = gsap.matchMedia();
 

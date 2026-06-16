@@ -6,16 +6,20 @@ interface Props {
   description?: string;
   canonicalPath?: string;
   isBlogPost?: boolean;
+  ogImage?: string;
 }
+
+const SITE_URL = "https://web-doctor-orpin.vercel.app";
 
 const {
   title = "Dr. Raúl Marcelo Vintimilla Ávila | Cirujano General y Laparoscopista en Cuenca",
   description = "Agenda una valoración con el Dr. Raúl Marcelo Vintimilla Ávila, cirujano general y laparoscopista en Cuenca. Especialista en cirugía de vesícula, hernias y apéndice en el Hospital San Juan de Dios.",
   canonicalPath = "",
   isBlogPost = false,
+  ogImage = "/doctor_portrait.jpg",
 } = Astro.props;
 
-const canonicalUrl = `https://dr-vintimilla-landing.vercel.app${canonicalPath}`;
+const canonicalUrl = `${SITE_URL}${canonicalPath}`;
 ---
 
 <!DOCTYPE html>
@@ -28,6 +32,15 @@ const canonicalUrl = `https://dr-vintimilla-landing.vercel.app${canonicalPath}`;
     // Detectar si las animaciones están soportadas y no reducidas
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       document.documentElement.classList.add('js-animations');
+      
+      // Fallback de seguridad: Si en 2.5 segundos no se ha iniciado la animación,
+      // se remueve la clase js-animations para asegurar que el contenido sea visible.
+      setTimeout(() => {
+        if (!document.documentElement.classList.contains('js-animations-started')) {
+          document.documentElement.classList.remove('js-animations');
+          console.warn('GSAP fallback triggered: hero elements forced visible.');
+        }
+      }, 2500);
     }
   </script>
 
@@ -39,10 +52,10 @@ const canonicalUrl = `https://dr-vintimilla-landing.vercel.app${canonicalPath}`;
   <link rel="canonical" href={canonicalUrl} />
   
   <!-- Open Graph / Meta Compartir -->
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content={isBlogPost ? "article" : "website"} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content="https://dr-vintimilla-landing.vercel.app/doctor_portrait.jpg" />
+  <meta property="og:image" content={`${SITE_URL}${ogImage}`} />
   <meta property="og:url" content={canonicalUrl} />
 
   <!-- Google Fonts: Outfit (Títulos) e Inter (Cuerpo de texto) -->
@@ -57,7 +70,7 @@ const canonicalUrl = `https://dr-vintimilla-landing.vercel.app${canonicalPath}`;
         "@context": "https://schema.org",
         "@type": "Physician",
         "name": "Dr. Raúl Marcelo Vintimilla Ávila",
-        "image": "https://dr-vintimilla-landing.vercel.app/doctor_portrait.jpg",
+        "image": `${SITE_URL}/doctor_portrait.jpg`,
         "description": "Atención especializada de cirugía general y laparoscópica en Cuenca. Consultas y cirugías planificadas previa cita en el Hospital San Juan de Dios.",
         "alumniOf": {
           "@type": "EducationalOrganization",
@@ -68,7 +81,7 @@ const canonicalUrl = `https://dr-vintimilla-landing.vercel.app${canonicalPath}`;
           "LaparoscopicSurgery"
         ],
         "telephone": "+593724125046",
-        "url": "https://dr-vintimilla-landing.vercel.app/",
+        "url": `${SITE_URL}/`,
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
