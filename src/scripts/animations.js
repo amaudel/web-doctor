@@ -189,6 +189,66 @@ if (!prefersReducedMotion) {
       { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: "power3.out" },
       "-=0.5"
     );
+
+    // --- Marca de Agua Médica Decorativa de Fondo ---
+    const watermark = document.querySelector(".medical-watermark");
+    if (watermark) {
+      // 1. Movimiento lento continuo ligado al scroll general (efecto parallax)
+      gsap.to(watermark, {
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1.5,
+        },
+        y: "35vh",
+        rotation: 30,
+        ease: "none"
+      });
+
+      // 2. Modificaciones sutiles de posición, escala y opacidad por secciones clave
+      
+      // Servicios
+      gsap.to(watermark, {
+        scrollTrigger: {
+          trigger: "#servicios",
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: 1,
+        },
+        scale: 1.1,
+        opacity: 0.05,
+        x: "-4vw",
+      });
+
+      // Trayectoria / Perfil
+      gsap.to(watermark, {
+        scrollTrigger: {
+          trigger: "#perfil",
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: 1,
+        },
+        scale: 1.22,
+        opacity: 0.065,
+        x: "3vw",
+        rotation: 55,
+      });
+
+      // Educación
+      gsap.to(watermark, {
+        scrollTrigger: {
+          trigger: "#recursos",
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: 1,
+        },
+        scale: 0.95,
+        opacity: 0.035,
+        x: "-2vw",
+        rotation: 15,
+      });
+    }
   });
 
   // --- CONFIGURACIÓN DE MÓVIL (Pantallas <= 768px) ---
