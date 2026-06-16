@@ -276,21 +276,45 @@
 
     /* Hero Section */
     .hero {
-      padding: 120px 0 100px;
-      background: radial-gradient(circle at 80% 20%, rgba(15, 98, 146, 0.06), transparent 50%),
-                  radial-gradient(circle at 20% 80%, rgba(15, 159, 117, 0.04), transparent 50%),
-                  linear-gradient(to bottom, #ffffff, #fafbfd);
+      padding: 160px 0 120px;
+      background-color: #0b1528; /* Fondo oscuro de reserva */
       position: relative;
       overflow: hidden;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right center;
+      z-index: 1;
+      will-change: transform;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, 
+        #0b1528 0%, 
+        rgba(11, 21, 40, 0.95) 35%, 
+        rgba(11, 21, 40, 0.7) 65%, 
+        rgba(11, 21, 40, 0.2) 100%);
+      z-index: 2;
+      pointer-events: none;
     }
 
     .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: radial-gradient(rgba(15, 98, 146, 0.04) 1.5px, transparent 1.5px);
-      background-size: 32px 32px;
-      pointer-events: none;
+      content: none !important; /* Desactivar trama de puntos en el hero */
     }
 
     .hero-grid {
@@ -299,7 +323,58 @@
       gap: 56px; 
       align-items: center;
       position: relative;
-      z-index: 2;
+      z-index: 3;
+      width: 100%;
+    }
+
+    .hero h1 {
+      color: #ffffff !important;
+    }
+
+    .hero h1 span {
+      color: #38bdf8 !important; /* Azul cielo más brillante para visibilidad */
+    }
+
+    .hero .lead {
+      color: #cbd5e1 !important;
+    }
+
+    .hero .eyebrow {
+      background: rgba(56, 189, 248, 0.1) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(56, 189, 248, 0.2) !important;
+    }
+
+    .hero .badge {
+      background: rgba(15, 23, 42, 0.65) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2) !important;
+      backdrop-filter: blur(8px) !important;
+      -webkit-backdrop-filter: blur(8px) !important;
+    }
+
+    .hero .badge::before {
+      background: #38bdf8 !important;
+    }
+
+    .hero .badge strong {
+      color: #ffffff !important;
+    }
+
+    .hero .badge span {
+      color: #94a3b8 !important;
+    }
+
+    .hero-phone-btn {
+      border-color: rgba(255, 255, 255, 0.3) !important;
+      color: #ffffff !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+    }
+
+    .hero-phone-btn:hover {
+      border-color: #ffffff !important;
+      background: rgba(255, 255, 255, 0.15) !important;
+      color: #ffffff !important;
     }
 
     .eyebrow {
@@ -1493,7 +1568,23 @@
       }
       
       .hero {
-        padding: 80px 0 64px;
+        padding: 120px 0 80px;
+      }
+
+      .hero-bg {
+        background-position: 75% center !important;
+      }
+
+      .hero-overlay {
+        background: linear-gradient(to right, 
+          #0b1528 0%, 
+          rgba(11, 21, 40, 0.95) 45%, 
+          rgba(11, 21, 40, 0.8) 75%, 
+          rgba(11, 21, 40, 0.4) 100%) !important;
+      }
+
+      .hero-spacer {
+        display: none !important;
       }
 
       .hero-grid {
@@ -1733,7 +1824,19 @@
       }
 
       .hero {
-        padding: 48px 0;
+        padding: 100px 0 60px;
+        text-align: center;
+      }
+
+      .hero-bg {
+        background-position: 65% center !important;
+        opacity: 0.45 !important;
+      }
+
+      .hero-overlay {
+        background: linear-gradient(to bottom, 
+          rgba(11, 21, 40, 0.95) 0%, 
+          rgba(11, 21, 40, 0.85) 100%) !important;
       }
 
       h1 {

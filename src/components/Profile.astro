@@ -1,10 +1,24 @@
 ---
+import { Image } from 'astro:assets';
+import doctorPortrait from '../assets/doctor_portrait.jpg';
 ---
 <!-- Sección: Perfil y Trayectoria -->
 <section id="perfil" style="background-color: #ffffff;">
   <div class="container">
     <div class="profile-grid">
       <div class="profile-stats">
+        <div class="profile-portrait-wrapper" style="margin-bottom: 28px; display: flex; justify-content: center;">
+          <Image 
+            src={doctorPortrait} 
+            alt="Dr. Raúl Marcelo Vintimilla Ávila, cirujano general y laparoscopista en Cuenca" 
+            width={300} 
+            height={375} 
+            loading="lazy" 
+            decoding="async" 
+            format="webp" 
+            style="border-radius: var(--radius-md); border: 2px solid rgba(255, 255, 255, 0.15); width: 100%; max-width: 260px; height: auto; object-fit: cover; box-shadow: var(--shadow-lg);"
+          />
+        </div>
         <h4 class="stats-card-title">Liderazgo y Experiencia</h4>
         
         <div class="profile-stat-item">
