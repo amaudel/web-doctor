@@ -1,4 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+import imgPrep from '../assets/preparacion-cirugia.jpg';
+import imgRecup from '../assets/recuperacion-vesicula.jpg';
+import imgLapa from '../assets/laparoscopia-vs-abierta.jpg';
 ---
 <!-- Sección: Recursos Educativos y Consejos -->
 <section class="education-section bg-light-sec" id="recursos">
@@ -14,7 +18,7 @@
       <article class="education-card">
         <div class="education-card-badge">Guía de Preparación</div>
         <div class="education-card-image">
-          <img src="/preparacion-cirugia.jpg" alt="Doctor explicando instrucciones con formulario al paciente" width="400" height="250" loading="lazy" decoding="async" />
+          <Image src={imgPrep} alt="Doctor explicando instrucciones con formulario al paciente" width={400} height={250} loading="lazy" decoding="async" format="webp" />
         </div>
         <div class="education-card-content">
           <span class="education-card-meta">Lectura: 3 min</span>
@@ -31,7 +35,7 @@
       <article class="education-card">
         <div class="education-card-badge">Cuidados en Casa</div>
         <div class="education-card-image">
-          <img src="/recuperacion-vesicula.jpg" alt="Paciente descansando con indicaciones de alta en casa" width="400" height="250" loading="lazy" decoding="async" />
+          <Image src={imgRecup} alt="Paciente descansando con indicaciones de alta en casa" width={400} height={250} loading="lazy" decoding="async" format="webp" />
         </div>
         <div class="education-card-content">
           <span class="education-card-meta">Lectura: 4 min</span>
@@ -48,7 +52,7 @@
       <article class="education-card">
         <div class="education-card-badge">Tecnología Médica</div>
         <div class="education-card-image">
-          <img src="/laparoscopia-vs-abierta.jpg" alt="Demostración visual comparativa del procedimiento laparoscópico e instrumental" width="400" height="250" loading="lazy" decoding="async" />
+          <Image src={imgLapa} alt="Demostración visual comparativa del procedimiento laparoscópico e instrumental" width={400} height={250} loading="lazy" decoding="async" format="webp" />
         </div>
         <div class="education-card-content">
           <span class="education-card-meta">Lectura: 3 min</span>
