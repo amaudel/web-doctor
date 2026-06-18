@@ -3,8 +3,8 @@
 <!-- Cabecera de Navegación -->
 <header class="header">
   <div class="container nav">
-    <a href="/#inicio" class="brand" aria-label="Inicio Dr. Raúl Marcelo Vintimilla Ávila">
-      <span class="brand-name">Dr. Raúl M. Vintimilla Á.</span>
+    <a href="/#inicio" class="brand" aria-label="Inicio Dr. Raúl Vintimilla Ávila">
+      <span class="brand-name">Dr. Raúl Vintimilla Á.</span>
       <span class="brand-sub">Cirujano General y Laparoscopista</span>
     </a>
     
@@ -50,21 +50,13 @@
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', () => {
       const isOpen = navMenu.classList.toggle('open');
+      menuToggle.classList.toggle('open', isOpen);
       menuToggle.setAttribute('aria-expanded', isOpen.toString());
       
-      const children = menuToggle.children;
-      if (children.length >= 3) {
-        if (isOpen) {
-          (children[0] as HTMLElement).style.transform = 'rotate(45deg) translate(5px, 5px)';
-          (children[1] as HTMLElement).style.opacity = '0';
-          (children[2] as HTMLElement).style.transform = 'rotate(-45deg) translate(6px, -6px)';
-          document.body.style.overflow = 'hidden';
-        } else {
-          (children[0] as HTMLElement).style.transform = 'none';
-          (children[1] as HTMLElement).style.opacity = '1';
-          (children[2] as HTMLElement).style.transform = 'none';
-          document.body.style.overflow = '';
-        }
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
       }
     });
 
@@ -74,14 +66,9 @@
       link.addEventListener('click', () => {
         if (navMenu.classList.contains('open')) {
           navMenu.classList.remove('open');
+          menuToggle.classList.remove('open');
           menuToggle.setAttribute('aria-expanded', 'false');
           document.body.style.overflow = '';
-          const children = menuToggle.children;
-          if (children.length >= 3) {
-            (children[0] as HTMLElement).style.transform = 'none';
-            (children[1] as HTMLElement).style.opacity = '1';
-            (children[2] as HTMLElement).style.transform = 'none';
-          }
         }
       });
     });
@@ -90,14 +77,9 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && navMenu.classList.contains('open')) {
         navMenu.classList.remove('open');
+        menuToggle.classList.remove('open');
         menuToggle.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
-        const children = menuToggle.children;
-        if (children.length >= 3) {
-          (children[0] as HTMLElement).style.transform = 'none';
-          (children[1] as HTMLElement).style.opacity = '1';
-          (children[2] as HTMLElement).style.transform = 'none';
-        }
       }
     });
   }

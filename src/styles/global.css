@@ -12,14 +12,15 @@
       --text-muted: #576880;      /* Slate Clínico 500 */
       --bg-light: #fafbfd;        /* Blanco/Gris Clínico de fondo premium */
       --bg-card: #ffffff;
-      --border: rgba(15, 23, 42, 0.08); /* Borde ultra fino semi-transparente */
-      --border-light: rgba(15, 23, 42, 0.04);
+      --border: rgba(15, 98, 146, 0.08); /* Borde ultra fino semi-transparente de tono clínico */
+      --border-light: rgba(15, 98, 146, 0.04);
+      --border-glass: rgba(255, 255, 255, 0.65); /* Para efectos de cristal traslúcido */
       
       /* Sombras premium suavizadas y difusas */
-      --shadow-sm: 0 4px 16px rgba(11, 21, 40, 0.02);
-      --shadow-md: 0 10px 28px rgba(11, 21, 40, 0.03);
-      --shadow-lg: 0 20px 48px rgba(11, 21, 40, 0.05);
-      --shadow-premium: 0 28px 72px rgba(11, 21, 40, 0.07);
+      --shadow-sm: 0 4px 20px rgba(11, 21, 40, 0.015);
+      --shadow-md: 0 12px 36px rgba(11, 21, 40, 0.025);
+      --shadow-lg: 0 24px 56px rgba(11, 21, 40, 0.045);
+      --shadow-premium: 0 32px 80px rgba(11, 21, 40, 0.065);
       
       /* Radio de bordes y transiciones */
       --radius-sm: 12px;
@@ -274,6 +275,18 @@
       transition: var(--transition-smooth);
     }
 
+    .menu-toggle.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
     /* Hero Section */
     .hero {
       padding: 160px 0 120px;
@@ -520,13 +533,15 @@
       max-width: 380px;
       aspect-ratio: 4 / 5;
       border-radius: var(--radius-lg);
-      background: white;
+      background: rgba(255, 255, 255, 0.05); /* fondo traslúcido elegante */
       padding: 10px;
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      box-shadow: var(--shadow-premium);
+      border: 1px solid rgba(255, 255, 255, 0.12); /* borde glass en fondo oscuro */
+      box-shadow: var(--shadow-premium), inset 0 1px 0 rgba(255, 255, 255, 0.1);
       overflow: hidden;
       position: relative;
       z-index: 2;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
 
     .hero-img-container img {
@@ -545,13 +560,13 @@
       position: absolute;
       bottom: 30px;
       left: -20px;
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.82); /* más traslúcido para efecto premium */
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       padding: 14px 20px;
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-lg);
-      border: 1px solid rgba(255, 255, 255, 0.6);
+      border: 1px solid var(--border-glass);
       display: flex;
       align-items: center;
       gap: 14px;
@@ -635,6 +650,8 @@
       transition: var(--transition-smooth);
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
     .symptom-card::before {
@@ -644,7 +661,7 @@
       left: 0;
       width: 4px;
       height: 100%;
-      background-color: var(--primary);
+      background: linear-gradient(180deg, var(--primary) 0%, var(--primary-hover) 100%);
       transform: scaleY(0);
       transform-origin: top;
       transition: var(--transition-smooth);
@@ -653,7 +670,7 @@
     .symptom-card:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow-lg);
-      border-color: rgba(15, 98, 146, 0.15);
+      border-color: rgba(15, 98, 146, 0.18);
     }
 
     .symptom-card:hover::before {
@@ -663,45 +680,48 @@
     .symptom-icon {
       width: 52px;
       height: 52px;
-      border-radius: var(--radius-sm);
+      border-radius: 50%; /* circular icon container for premium feel */
       background: var(--primary-light);
       color: var(--primary);
       display: grid;
       place-items: center;
       margin-bottom: 24px;
       transition: var(--transition-smooth);
+      border: 1px solid rgba(15, 98, 146, 0.08);
     }
 
     .symptom-icon svg {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
     }
 
     .symptom-card:hover .symptom-icon {
       background: var(--primary);
       color: white;
-      transform: scale(1.05) rotate(5deg);
+      transform: scale(1.05) rotate(8deg);
+      box-shadow: 0 8px 16px rgba(15, 98, 146, 0.2);
     }
 
     .symptom-card h3 {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.18rem;
+      font-size: 1.2rem;
       color: var(--primary-dark);
       margin-bottom: 12px;
+      font-weight: 700;
     }
 
     .symptom-card p {
       font-size: 0.95rem;
       color: var(--text-muted);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     /* Banner de Advertencia de Síntomas de Alarma */
     .alarm-banner {
       margin-top: 48px;
-      background: #fbf8ee;
-      border: 1px solid rgba(198, 146, 20, 0.15);
-      border-left: 4px solid #c69214;
+      background: #fdfaf3; /* color crema aún más suave y clínico */
+      border: 1px solid rgba(217, 154, 25, 0.15);
+      border-left: 4px solid #d99a19;
       padding: 24px;
       border-radius: var(--radius-md);
       display: flex;
@@ -919,8 +939,8 @@
     }
 
     .services-column.featured {
-      background: linear-gradient(180deg, rgba(15, 98, 146, 0.04) 0%, rgba(255, 255, 255, 0.8) 100%);
-      border: 1px solid rgba(15, 98, 146, 0.18);
+      background: linear-gradient(135deg, rgba(15, 98, 146, 0.05) 0%, rgba(255, 255, 255, 0.95) 50%, rgba(15, 98, 146, 0.02) 100%);
+      border: 1px solid rgba(15, 98, 146, 0.22); /* borde destacado de tono clínico */
       border-radius: var(--radius-lg);
       padding: 40px 32px;
       box-shadow: var(--shadow-premium);
@@ -932,22 +952,25 @@
       position: absolute;
       top: -12px;
       right: 32px;
-      background: var(--primary);
+      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-hover) 100%);
       color: white;
       font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      padding: 4px 14px;
+      padding: 5px 16px;
       border-radius: 999px;
-      box-shadow: 0 4px 12px rgba(15, 98, 146, 0.25);
+      box-shadow: 0 6px 16px rgba(15, 98, 146, 0.22);
     }
 
     .services-column.standard {
       padding: 40px 32px;
-      background: rgba(255, 255, 255, 0.4);
-      border: 1px solid var(--border-light);
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid var(--border);
       border-radius: var(--radius-lg);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      box-shadow: var(--shadow-sm);
     }
 
     .service-list {
@@ -958,7 +981,7 @@
 
     .service-card {
       background: white;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(15, 98, 146, 0.06); /* borde más suave */
       border-radius: var(--radius-md);
       padding: 28px;
       box-shadow: var(--shadow-sm);
@@ -969,9 +992,9 @@
     }
 
     .service-card:hover {
-      transform: translateY(-3px) scale(1.005);
+      transform: translateY(-4px) scale(1.005);
       box-shadow: var(--shadow-md);
-      border-color: rgba(15, 98, 146, 0.15);
+      border-color: rgba(15, 98, 146, 0.16);
     }
 
     .service-card h4 {
@@ -1029,7 +1052,7 @@
     .process-step {
       position: relative;
       background: white;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(15, 98, 146, 0.06); /* borde más sutil */
       border-radius: var(--radius-md);
       padding: 32px 24px;
       box-shadow: var(--shadow-sm);
@@ -1042,7 +1065,7 @@
 
     .process-step:hover {
       transform: translateY(-5px);
-      border-color: rgba(15, 98, 146, 0.18);
+      border-color: rgba(15, 98, 146, 0.16);
       box-shadow: var(--shadow-lg);
     }
 
@@ -1054,7 +1077,7 @@
       font-family: 'Outfit', sans-serif;
       font-weight: 800;
       color: var(--primary);
-      opacity: 0.04;
+      opacity: 0.03; /* más sutil */
       line-height: 1;
       pointer-events: none;
       z-index: 1;
@@ -1062,15 +1085,15 @@
     }
 
     .process-step:hover .process-bg-number {
-      opacity: 0.08;
-      transform: translateY(-8px);
+      opacity: 0.06;
+      transform: translateY(-6px);
     }
 
     .process-number {
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: var(--primary);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
       color: white;
       display: grid;
       place-items: center;
@@ -1078,14 +1101,14 @@
       font-weight: 700;
       font-size: 1.15rem;
       margin-bottom: 16px;
-      box-shadow: 0 4px 10px rgba(15, 98, 146, 0.25);
-      border: 3px solid white;
+      box-shadow: 0 4px 12px rgba(15, 98, 146, 0.2);
+      border: 3px solid var(--bg-card); /* dinámico con el fondo de tarjeta */
       transition: var(--transition-smooth);
     }
     
     .process-step:hover .process-number {
-      background: var(--primary-hover);
       transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(15, 98, 146, 0.3);
     }
 
     .process-step h3 {
@@ -1110,22 +1133,26 @@
     }
 
     .faq-item {
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid var(--border);
-      border-radius: 0;
+      background: rgba(255, 255, 255, 0.5); /* fondo semitraslúcido */
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 16px;
       overflow: hidden;
-      box-shadow: none;
       transition: var(--transition-smooth);
+      box-shadow: var(--shadow-sm);
+      padding: 0 24px;
     }
 
     .faq-item:hover {
-      border-bottom-color: var(--primary);
+      border-color: rgba(15, 98, 146, 0.16);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      background: white;
     }
 
     .faq-header {
       width: 100%;
-      padding: 24px 0;
+      padding: 22px 0;
       background: transparent;
       border: none;
       text-align: left;
@@ -1142,13 +1169,12 @@
     }
 
     .faq-header:hover {
-      background: transparent;
       color: var(--primary);
     }
 
     .faq-icon {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       color: var(--primary);
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       flex-shrink: 0;
@@ -1162,16 +1188,18 @@
     }
 
     .faq-content-inner {
-      padding: 0 0 24px 0;
-      font-size: 1rem;
+      padding: 0 0 22px 0;
+      font-size: 0.95rem;
       color: var(--text-muted);
       border-top: none;
-      padding-top: 8px;
+      padding-top: 4px;
       line-height: 1.65;
     }
 
     .faq-item.active {
-      border-color: var(--primary);
+      border-color: rgba(15, 98, 146, 0.25);
+      background: white;
+      box-shadow: var(--shadow-md);
     }
 
     .faq-item.active .faq-header {
@@ -1180,6 +1208,7 @@
 
     .faq-item.active .faq-icon {
       transform: rotate(180deg);
+      color: var(--primary-hover);
     }
 
     .faq-item.active .faq-content {
@@ -1202,7 +1231,7 @@
 
     .location-card {
       background: white;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(15, 98, 146, 0.05); /* borde ultra suave */
       border-radius: var(--radius-md);
       padding: 24px;
       display: flex;
@@ -1216,7 +1245,7 @@
     .location-card:hover {
       transform: translateY(-2px);
       box-shadow: var(--shadow-md);
-      border-color: rgba(15, 98, 146, 0.2);
+      border-color: rgba(15, 98, 146, 0.16);
     }
 
     .location-card.highlight {
@@ -1234,6 +1263,7 @@
       place-items: center;
       flex-shrink: 0;
       transition: transform 0.3s ease;
+      border: 1px solid rgba(15, 98, 146, 0.08);
     }
 
     .location-card:hover .location-card-icon {
@@ -1245,8 +1275,8 @@
     }
 
     .location-card-icon svg {
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
     }
 
     .location-card-content h3 {
@@ -1293,8 +1323,8 @@
       height: 420px;
       border-radius: var(--radius-md);
       overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(15, 98, 146, 0.08);
+      box-shadow: var(--shadow-md); /* más destacado */
     }
 
     .map-container iframe {
@@ -1305,7 +1335,7 @@
 
     .navigation-actions {
       background: white;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(15, 98, 146, 0.05);
       border-radius: var(--radius-md);
       padding: 24px;
       box-shadow: var(--shadow-sm);
@@ -1740,6 +1770,12 @@
         display: block;
       }
 
+      .mobile-contact-grid .btn-secondary {
+        background: #ffffff !important;
+        color: var(--primary) !important;
+        border: 1.5px solid rgba(15, 98, 146, 0.35) !important;
+      }
+
       body {
         padding-bottom: 100px; 
       }
@@ -1753,29 +1789,51 @@
         display: none !important;
       }
 
-      /* badges del hero reorganizados para evitar textos apretados en móvil */
+      /* badges del hero reorganizados como slider horizontal deslizable para ahorrar espacio vertical */
       .badges {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
         gap: 12px;
-        width: 100%;
-        margin-bottom: 24px;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%); /* alinear con bordes de pantalla */
+        margin-right: calc(-50vw + 50%);
+        padding: 4px 24px 16px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE */
+        margin-bottom: 16px;
+      }
+
+      .badges::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
       }
 
       .badge {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 14px 16px;
+        flex: 0 0 78%; /* cada badge ocupa el 78% del ancho móvil */
+        scroll-snap-align: center;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 20px 18px;
+        text-align: left;
+        background: rgba(255, 255, 255, 0.04) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
       }
 
       .badge strong {
-        font-size: 1.15rem;
-        margin-bottom: 0;
+        font-size: 1.2rem;
+        margin-bottom: 4px;
+        padding-left: 6px;
+        color: #ffffff !important;
       }
 
       .badge span {
-        font-size: 0.82rem;
-        text-align: right;
+        font-size: 0.8rem;
+        text-align: left;
+        padding-left: 6px;
+        color: #94a3b8 !important;
       }
 
       /* Reducir altura del mapa de ubicación en móvil */
@@ -2099,26 +2157,44 @@
 
     .credential-card-badge {
       background: white;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(15, 98, 146, 0.05); /* borde ultra suave */
       border-radius: var(--radius-sm);
-      padding: 16px 20px;
+      padding: 18px 22px; /* un poco más de aire */
       display: flex;
       align-items: center;
       gap: 16px;
       transition: var(--transition-smooth);
       box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .credential-card-badge::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: #c69214; /* línea dorada de prestigio */
+      opacity: 0;
+      transition: var(--transition-smooth);
     }
 
     .credential-card-badge:hover {
-      transform: translateY(-3px);
+      transform: translateY(-4px);
       background: #faf8f2;
-      border-color: rgba(198, 146, 20, 0.25);
+      border-color: rgba(198, 146, 20, 0.18);
       box-shadow: var(--shadow-md);
     }
 
+    .credential-card-badge:hover::after {
+      opacity: 1;
+    }
+
     .credential-icon-shield {
-      color: #b08110;
-      background: rgba(198, 146, 20, 0.08);
+      color: #c69214;
+      background: rgba(198, 146, 20, 0.06);
       border-radius: 50%;
       width: 44px;
       height: 44px;
@@ -2126,16 +2202,18 @@
       display: grid;
       place-items: center;
       transition: var(--transition-smooth);
+      border: 1px solid rgba(198, 146, 20, 0.1);
     }
 
     .credential-card-badge:hover .credential-icon-shield {
-      background: rgba(198, 146, 20, 0.15);
-      transform: scale(1.08) rotate(5deg);
+      background: rgba(198, 146, 20, 0.12);
+      transform: scale(1.06) rotate(6deg);
+      box-shadow: 0 4px 10px rgba(198, 146, 20, 0.12);
     }
 
     .credential-icon-shield svg {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
     }
 
     .credential-info-text strong {

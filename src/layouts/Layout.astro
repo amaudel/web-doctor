@@ -12,8 +12,8 @@ interface Props {
 const SITE_URL = "https://web-doctor-orpin.vercel.app";
 
 const {
-  title = "Dr. Raúl Marcelo Vintimilla Ávila | Cirujano General y Laparoscopista en Cuenca",
-  description = "Agenda una valoración con el Dr. Raúl Marcelo Vintimilla Ávila, cirujano general y laparoscopista en Cuenca. Especialista en cirugía de vesícula, hernias y apéndice en el Hospital San Juan de Dios.",
+  title = "Dr. Raúl Vintimilla Ávila | Cirujano General y Laparoscopista en Cuenca",
+  description = "Agenda una valoración con el Dr. Raúl Vintimilla Ávila, cirujano general y laparoscopista en Cuenca. Especialista en cirugía de vesícula, hernias y apéndice en el Hospital San Juan de Dios.",
   canonicalPath = "",
   isBlogPost = false,
   ogImage = "/doctor_portrait.jpg",
@@ -58,6 +58,10 @@ const canonicalUrl = `${SITE_URL}${canonicalPath}`;
   <meta property="og:image" content={`${SITE_URL}${ogImage}`} />
   <meta property="og:url" content={canonicalUrl} />
 
+  <!-- Favicon Oficial -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+
   <!-- Google Fonts: Outfit (Títulos) e Inter (Cuerpo de texto) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,7 +73,7 @@ const canonicalUrl = `${SITE_URL}${canonicalPath}`;
       <script type="application/ld+json" is:inline set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Physician",
-        "name": "Dr. Raúl Marcelo Vintimilla Ávila",
+        "name": "Dr. Raúl Vintimilla Ávila",
         "image": `${SITE_URL}/doctor_portrait.jpg`,
         "description": "Atención especializada de cirugía general y laparoscópica en Cuenca. Consultas y cirugías planificadas previa cita en el Hospital San Juan de Dios.",
         "alumniOf": {
@@ -126,7 +130,7 @@ const canonicalUrl = `${SITE_URL}${canonicalPath}`;
         "url": canonicalUrl,
         "author": {
           "@type": "Person",
-          "name": "Dr. Raúl Marcelo Vintimilla Ávila",
+          "name": "Dr. Raúl Vintimilla Ávila",
           "jobTitle": "Cirujano General y Laparoscopista",
           "worksFor": {
             "@type": "MedicalOrganization",
