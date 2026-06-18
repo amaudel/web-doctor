@@ -15,6 +15,8 @@
       --border: rgba(15, 98, 146, 0.08); /* Borde ultra fino semi-transparente de tono clínico */
       --border-light: rgba(15, 98, 146, 0.04);
       --border-glass: rgba(255, 255, 255, 0.65); /* Para efectos de cristal traslúcido */
+      --menu-bg: rgba(255, 255, 255, 0.95);
+      --header-bg: rgba(255, 255, 255, 0.82);
       
       /* Sombras premium suavizadas y difusas */
       --shadow-sm: 0 4px 20px rgba(11, 21, 40, 0.015);
@@ -29,6 +31,32 @@
       --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
       
     --max-width: 1200px;
+  }
+
+  /* Paleta de colores en modo oscuro clínico */
+  html.dark {
+    --primary-dark: #f1f5f9;    /* Títulos en claro sobre fondo oscuro */
+    --primary: #38bdf8;         /* Azul Clínico Cyan vibrante */
+    --primary-hover: #7dd3fc;   
+    --primary-light: #0d2138;   
+    --accent: #10b981;          
+    --accent-hover: #34d399;    
+    --accent-light: #062b21;    
+    
+    --text-dark: #f1f5f9;       /* Slate 100 */
+    --text-muted: #94a3b8;      /* Slate 400 */
+    --bg-light: #070d19;        /* Azul Marino Clínico Profundo */
+    --bg-card: #0d172a;         /* Slate 900 para tarjetas */
+    --border: rgba(56, 189, 248, 0.15); 
+    --border-light: rgba(56, 189, 248, 0.08);
+    --border-glass: rgba(13, 23, 42, 0.7);
+    --menu-bg: rgba(13, 23, 42, 0.95);
+    --header-bg: rgba(13, 23, 42, 0.82);
+    
+    --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 12px 36px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.5);
+    --shadow-premium: 0 32px 80px rgba(0, 0, 0, 0.6);
   }
 
   /* Prevenir parpadeo de contenido (FOUC) en animaciones iniciales de carga */
@@ -70,6 +98,7 @@
     html { 
       scroll-behavior: smooth; 
       scroll-padding-top: 90px; 
+      transition: background-color 0.3s ease;
     }
 
     body {
@@ -78,6 +107,7 @@
       background-color: var(--bg-light);
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     a { 
@@ -102,7 +132,7 @@
       z-index: 100;
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
-      background: rgba(255, 255, 255, 0.82);
+      background: var(--header-bg);
       border-bottom: 1px solid var(--border-light);
       box-shadow: 0 4px 30px rgba(11, 21, 40, 0.02);
       transition: var(--transition-smooth);
@@ -980,7 +1010,7 @@
     }
 
     .service-card {
-      background: white;
+      background: var(--bg-card);
       border: 1px solid rgba(15, 98, 146, 0.06); /* borde más suave */
       border-radius: var(--radius-md);
       padding: 28px;
@@ -1051,7 +1081,7 @@
 
     .process-step {
       position: relative;
-      background: white;
+      background: var(--bg-card);
       border: 1px solid rgba(15, 98, 146, 0.06); /* borde más sutil */
       border-radius: var(--radius-md);
       padding: 32px 24px;
@@ -1147,7 +1177,7 @@
       border-color: rgba(15, 98, 146, 0.16);
       transform: translateY(-2px);
       box-shadow: var(--shadow-md);
-      background: white;
+      background: var(--bg-card);
     }
 
     .faq-header {
@@ -1198,7 +1228,7 @@
 
     .faq-item.active {
       border-color: rgba(15, 98, 146, 0.25);
-      background: white;
+      background: var(--bg-card);
       box-shadow: var(--shadow-md);
     }
 
@@ -1230,7 +1260,7 @@
     }
 
     .location-card {
-      background: white;
+      background: var(--bg-card);
       border: 1px solid rgba(15, 98, 146, 0.05); /* borde ultra suave */
       border-radius: var(--radius-md);
       padding: 24px;
@@ -1334,7 +1364,7 @@
     }
 
     .navigation-actions {
-      background: white;
+      background: var(--bg-card);
       border: 1px solid rgba(15, 98, 146, 0.05);
       border-radius: var(--radius-md);
       padding: 24px;
@@ -1696,7 +1726,7 @@
         left: 0;
         width: 100%;
         height: calc(100vh - 70px);
-        background: rgba(255, 255, 255, 0.95);
+        background: var(--menu-bg);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
@@ -1771,7 +1801,7 @@
       }
 
       .mobile-contact-grid .btn-secondary {
-        background: #ffffff !important;
+        background: var(--bg-card) !important;
         color: var(--primary) !important;
         border: 1.5px solid rgba(15, 98, 146, 0.35) !important;
       }
@@ -1939,7 +1969,7 @@
     }
 
     .testimonial-card {
-      background: white;
+      background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       padding: 40px;
@@ -2024,7 +2054,7 @@
     }
 
     .education-card {
-      background: white;
+      background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       overflow: hidden;
@@ -2156,7 +2186,7 @@
     }
 
     .credential-card-badge {
-      background: white;
+      background: var(--bg-card);
       border: 1px solid rgba(15, 98, 146, 0.05); /* borde ultra suave */
       border-radius: var(--radius-sm);
       padding: 18px 22px; /* un poco más de aire */
@@ -2283,7 +2313,7 @@
     }
 
     .article-content {
-      background: white;
+      background: var(--bg-card);
       max-width: 840px;
       margin: 0 auto;
       border: 1px solid var(--border);
@@ -2539,7 +2569,7 @@
     .related-card {
       display: flex;
       gap: 16px;
-      background: white;
+      background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: var(--radius-sm);
       padding: 16px;
@@ -2598,5 +2628,70 @@
         grid-template-columns: 1fr;
         gap: 16px;
       }
+    }
+
+    /* Theme Toggle Button & Layout */
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      position: relative;
+      z-index: 101;
+      padding: 0;
+    }
+
+    .theme-toggle:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: scale(1.05);
+    }
+
+    /* En tema oscuro */
+    html.dark .theme-toggle {
+      background: rgba(56, 189, 248, 0.08);
+      border-color: rgba(56, 189, 248, 0.2);
+      color: var(--primary);
+    }
+
+    html.dark .theme-toggle:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--primary);
+      color: var(--primary-hover);
+    }
+
+    /* Ocultar/mostrar iconos según tema */
+    .theme-toggle .sun-icon {
+      display: none;
+      width: 20px;
+      height: 20px;
+    }
+
+    .theme-toggle .moon-icon {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+
+    html.dark .theme-toggle .sun-icon {
+      display: block;
+    }
+
+    html.dark .theme-toggle .moon-icon {
+      display: none;
     }
 

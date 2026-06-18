@@ -29,6 +29,24 @@ const canonicalUrl = `${SITE_URL}${canonicalPath}`;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <script is:inline>
+    // Inicializar el tema de color antes de pintar la pagina para evitar parpadeos
+    const theme = (() => {
+      if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme === 'light' || storedTheme === 'dark') return storedTheme;
+      }
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
+      return 'light';
+    })();
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    window.localStorage.setItem('theme', theme);
+  </script>
+
+  <script is:inline>
     // Detectar si las animaciones están soportadas y no reducidas
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       document.documentElement.classList.add('js-animations');
