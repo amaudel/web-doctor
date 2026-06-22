@@ -49,35 +49,43 @@ import doctorPortrait from '../assets/doctor_portrait.jpg';
         <h2 class="section-title" style="margin-bottom: 20px;">Trayectoria en Cirugía General y Laparoscópica en Cuenca</h2>
         <p>La toma de decisiones quirúrgicas requiere conocimientos técnicos actualizados y la sensatez que aporta la práctica constante.</p>
         <p>Como especialista en <strong>cirugía general y laparoscópica</strong> con más de 30 años de experiencia, el Dr. Raúl Vintimilla Ávila ofrece una evaluación honesta, ética y enfocada en su seguridad.</p>
-        <p>Es miembro fundador y <strong>Ex Presidente Ejecutivo</strong> del <strong>Hospital San Juan de Dios</strong>, liderando el desarrollo de la salud privada en la región.</p>
-        <p>Su trayectoria como médico tratante en el Hospital Vicente Corral Moscoso avala su capacidad para resolver diagnósticos complejos con estricto criterio clínico.</p>
         
-        <ul class="profile-checklist" style="margin-bottom: 36px;">
-          <li class="profile-checklist-item">
-            <span class="checklist-icon-wrapper">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
-            Título de Médico Cirujano (Universidad de Cuenca, 1987)
-          </li>
-          <li class="profile-checklist-item">
-            <span class="checklist-icon-wrapper">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
-            Especialista en Cirugía General y Laparoscópica (SENESCYT / MSP)
-          </li>
-          <li class="profile-checklist-item">
-            <span class="checklist-icon-wrapper">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
-            Ex Presidente Ejecutivo y Socio Fundador del Hospital San Juan de Dios
-          </li>
-          <li class="profile-checklist-item">
-            <span class="checklist-icon-wrapper">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
-            Ex Médico Tratante del Hospital Vicente Corral Moscoso
-          </li>
-        </ul>
+        <div id="profileDetails" class="profile-details-expanded hidden">
+          <p>Es miembro fundador y <strong>Ex Presidente Ejecutivo</strong> del <strong>Hospital San Juan de Dios</strong>, liderando el desarrollo de la salud privada en la región.</p>
+          <p>Su trayectoria como médico tratante en el Hospital Vicente Corral Moscoso avala su capacidad para resolver diagnósticos complejos con estricto criterio clínico.</p>
+          
+          <ul class="profile-checklist" style="margin-bottom: 24px;">
+            <li class="profile-checklist-item">
+              <span class="checklist-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Título de Médico Cirujano (Universidad de Cuenca, 1987)
+            </li>
+            <li class="profile-checklist-item">
+              <span class="checklist-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Especialista en Cirugía General y Laparoscópica (SENESCYT / MSP)
+            </li>
+            <li class="profile-checklist-item">
+              <span class="checklist-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Ex Presidente Ejecutivo y Socio Fundador del Hospital San Juan de Dios
+            </li>
+            <li class="profile-checklist-item">
+              <span class="checklist-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Ex Médico Tratante del Hospital Vicente Corral Moscoso
+            </li>
+          </ul>
+        </div>
+
+        <button id="toggleProfileBtn" class="btn btn-secondary-outline" aria-expanded="false" style="margin-top: 16px; display: inline-flex; align-items: center;">
+          <span>Ver trayectoria completa</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px; transition: transform 0.2s ease;"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
       </div>
     </div>
 
@@ -119,3 +127,26 @@ import doctorPortrait from '../assets/doctor_portrait.jpg';
     </div>
   </div>
 </section>
+
+<script>
+  const toggleBtn = document.getElementById('toggleProfileBtn');
+  const details = document.getElementById('profileDetails');
+  
+  if (toggleBtn && details) {
+    toggleBtn.addEventListener('click', () => {
+      const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', (!isExpanded).toString());
+      details.classList.toggle('hidden', isExpanded);
+      
+      const btnText = toggleBtn.querySelector('span');
+      if (btnText) {
+        btnText.textContent = isExpanded ? 'Ver trayectoria completa' : 'Ver menos';
+      }
+      
+      const icon = toggleBtn.querySelector('svg');
+      if (icon) {
+        icon.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(180deg)';
+      }
+    });
+  }
+</script>
