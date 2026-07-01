@@ -82,15 +82,37 @@
   const navMenu = document.getElementById('navMenu');
 
   if (menuToggle && navMenu) {
+    const closeMenu = () => {
+      navMenu.classList.remove('open');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    };
+
+    const openMenu = () => {
+      navMenu.classList.add('open');
+      menuToggle.classList.add('open');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('menu-open');
+    };
+
     menuToggle.addEventListener('click', () => {
-      const isOpen = navMenu.classList.toggle('open');
-      menuToggle.classList.toggle('open', isOpen);
-      menuToggle.setAttribute('aria-expanded', isOpen.toString());
-      
-      if (isOpen) {
-        document.body.style.overflow = 'hidden';
+      if (navMenu.classList.contains('open')) {
+        closeMenu();
       } else {
-        document.body.style.overflow = '';
+        openMenu();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1024 && navMenu.classList.contains('open')) {
+        closeMenu();
+      }
+    });
+
+    navMenu.addEventListener('click', (e) => {
+      if (e.target === navMenu) {
+        closeMenu();
       }
     });
 
@@ -99,10 +121,7 @@
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         if (navMenu.classList.contains('open')) {
-          navMenu.classList.remove('open');
-          menuToggle.classList.remove('open');
-          menuToggle.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
+          closeMenu();
         }
       });
     });
@@ -110,10 +129,7 @@
     // Cerrar menú al presionar Escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && navMenu.classList.contains('open')) {
-        navMenu.classList.remove('open');
-        menuToggle.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+        closeMenu();
       }
     });
   }
