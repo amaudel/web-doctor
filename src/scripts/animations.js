@@ -14,6 +14,61 @@ if (!prefersReducedMotion) {
   // Configuración de matchMedia para animaciones adaptativas
   const mm = gsap.matchMedia();
 
+  const setupMicroInteractions = () => {
+    gsap.utils.toArray('.education-card').forEach((card) => {
+      const image = card.querySelector('img');
+
+      card.addEventListener('mouseenter', () => {
+        gsap.to(card, {
+          y: -8,
+          scale: 1.012,
+          boxShadow: '0 28px 70px rgba(15, 23, 42, 0.16)',
+          duration: 0.32,
+          ease: 'power3.out',
+        });
+
+        if (image) {
+          gsap.to(image, { scale: 1.045, duration: 0.7, ease: 'power3.out' });
+        }
+      });
+
+      card.addEventListener('mouseleave', () => {
+        gsap.to(card, {
+          y: 0,
+          scale: 1,
+          boxShadow: '',
+          duration: 0.38,
+          ease: 'power3.out',
+        });
+
+        if (image) {
+          gsap.to(image, { scale: 1, duration: 0.7, ease: 'power3.out' });
+        }
+      });
+    });
+
+    gsap.utils.toArray('.btn, .menu-cta').forEach((button) => {
+      button.addEventListener('mouseenter', () => {
+        gsap.to(button, { y: -2, scale: 1.015, duration: 0.22, ease: 'power3.out' });
+      });
+
+      button.addEventListener('mouseleave', () => {
+        gsap.to(button, { y: 0, scale: 1, duration: 0.28, ease: 'power3.out' });
+      });
+    });
+
+    const whatsapp = document.querySelector('.whatsapp-float');
+    if (whatsapp) {
+      gsap.to(whatsapp, {
+        scale: 1.055,
+        duration: 1.55,
+        ease: 'sine.inOut',
+        repeat: -1,
+        yoyo: true,
+      });
+    }
+  };
+
   // --- CONFIGURACIÓN DE ESCRITORIO & TABLETS (> 768px) ---
   mm.add("(min-width: 769px)", () => {
     // 1. Animación del Hero (Carga Inicial y Parallax)
@@ -148,19 +203,21 @@ if (!prefersReducedMotion) {
       const recursosTl = gsap.timeline({
         scrollTrigger: {
           trigger: "#recursos",
-          start: "top 85%",
+          start: "top 82%",
           toggleActions: "play none none none"
         }
       });
       recursosTl.fromTo("#recursos .section-header",
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
+        { autoAlpha: 0, y: 26, filter: "blur(8px)" },
+        { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 0.78, ease: "power3.out", clearProps: "filter,willChange" }
       ).fromTo("#recursos .education-card",
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: "power3.out" },
+        { autoAlpha: 0, y: 34, scale: 0.975, filter: "blur(10px)" },
+        { autoAlpha: 1, y: 0, scale: 1, filter: "blur(0px)", duration: 0.82, stagger: 0.12, ease: "power3.out", clearProps: "filter,willChange" },
         "-=0.5"
       );
     }
+
+    setupMicroInteractions();
 
     // --- Sección: Preguntas Frecuentes (#faq) ---
     if (document.querySelector("#faq")) {

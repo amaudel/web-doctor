@@ -283,6 +283,7 @@
       font-size: 0.95rem;
       cursor: pointer; 
       transition: var(--transition-smooth); 
+      transform-origin: center;
     }
 
     .btn-sm {
@@ -1692,6 +1693,7 @@
       box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
       cursor: pointer;
       transition: var(--transition-smooth);
+      transform-origin: center;
     }
 
     .whatsapp-float::before {
@@ -2308,12 +2310,32 @@
       display: flex;
       flex-direction: column;
       position: relative;
+      isolation: isolate;
+      transform-origin: center;
     }
 
     .education-card:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow-lg);
       border-color: rgba(15, 98, 146, 0.15);
+    }
+
+    .education-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: inherit;
+      background:
+        linear-gradient(135deg, rgba(8, 145, 178, 0.16), transparent 38%),
+        radial-gradient(circle at 82% 12%, rgba(34, 211, 238, 0.18), transparent 32%);
+      opacity: 0;
+      transition: opacity 260ms ease;
+    }
+
+    .education-card:hover::after,
+    .education-card:focus-within::after {
+      opacity: 1;
     }
 
     .education-card-badge {
@@ -2342,11 +2364,15 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition:
+        transform 700ms cubic-bezier(0.22, 1, 0.36, 1),
+        filter 700ms cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    .education-card:hover .education-card-image img {
-      transform: scale(1.06);
+    .education-card:hover .education-card-image img,
+    .education-card:focus-within .education-card-image img {
+      filter: saturate(1.08) contrast(1.03);
+      transform: scale(1.045);
     }
 
     .education-card-content {
@@ -2939,4 +2965,3 @@
     html.dark .theme-toggle .moon-icon {
       display: none;
     }
-
