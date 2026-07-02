@@ -127,12 +127,12 @@ if (!prefersReducedMotion) {
           toggleActions: "play none none none"
         }
       });
-      serviciosTl.fromTo("#servicios .section-header",
+      serviciosTl.fromTo("#servicios .services-intro",
         { opacity: 0, y: 30 },
         { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
-      ).fromTo("#servicios .services-column",
+      ).fromTo("#servicios .service-card, #servicios .services-bottom-cta",
         { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.2, ease: "power3.out" },
+        { opacity: 1, y: 0, duration: 0.8, stagger: 0.08, ease: "power3.out" },
         "-=0.5"
       );
     }

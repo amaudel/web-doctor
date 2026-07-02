@@ -1,103 +1,147 @@
 ---
 ---
 <!-- Sección: Servicios y Procedimientos -->
-<section class="bg-light-sec" id="servicios">
+<section class="services-section" id="servicios">
   <div class="container">
-    <div class="section-header" style="margin-bottom: 60px;">
-      <span class="section-subtitle">Especialidades</span>
-      <h2 class="section-title">Servicios de Cirugía General y Laparoscópica en Cuenca</h2>
+    <div class="services-showcase">
+      <div class="services-column services-intro">
+        <span class="section-subtitle">Servicios</span>
+        <h2 class="section-title">Atención quirúrgica clara, segura y especializada en Cuenca</h2>
+        <p class="services-lead">Procedimientos de cirugía general y laparoscópica planificados con criterio médico, tecnología actual y seguimiento cercano en cada etapa.</p>
+
+        <div class="services-assurance-list">
+          <article class="services-assurance-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-5"/></svg>
+            </span>
+            <div>
+              <h3>Valoración responsable</h3>
+              <p>Se revisa cada caso antes de definir si conviene una técnica laparoscópica o convencional.</p>
+            </div>
+          </article>
+
+          <article class="services-assurance-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 15h4"/></svg>
+            </span>
+            <div>
+              <h3>Consulta y seguimiento</h3>
+              <p>Orientación antes del procedimiento y controles posteriores para una recuperación ordenada.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="services-column services-panel">
+        <div class="services-pill">
+          <span class="service-icon compact" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 4 4L22 6"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </span>
+          Cirugía general y mínima invasión
+        </div>
+
+        <div class="service-list">
+          <article class="service-card featured">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4.5 19 9"/><path d="M5 19 19 5"/><path d="m8 16-3 3"/><path d="m16 8 3-3"/></svg>
+            </span>
+            <h3>Cirugía laparoscópica</h3>
+            <p class="service-short-desc">Alternativa mínimamente invasiva para resolver patologías abdominales con incisiones pequeñas.</p>
+            <div class="service-full-desc hidden">
+              <p>Busca reducir dolor, cicatrices y tiempo de recuperación cuando el diagnóstico permite este abordaje.</p>
+            </div>
+            <button class="btn-service-more" aria-expanded="false">
+              <span>Ver más</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3c1.5 2.5 3.5 3.5 6 4 2.5.5 4 2.7 4 5.5 0 4.5-3.3 8.5-8 8.5-2.3 0-4-1.4-4-3.7 0-1.5.8-2.8 2-3.5"/><path d="M9 9c2 1 4 1 6 0"/><path d="M10 13c1.5.6 3 .6 4.5 0"/></svg>
+            </span>
+            <h3>Colecistectomía</h3>
+            <p class="service-short-desc">Tratamiento quirúrgico para cálculos o inflamación de la vesícula biliar.</p>
+            <div class="service-full-desc hidden">
+              <p>La técnica se define luego de valorar síntomas, estudios de imagen y condición general del paciente.</p>
+            </div>
+            <button class="btn-service-more" aria-expanded="false">
+              <span>Ver más</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12c2.5-4.5 11.5-4.5 14 0"/><path d="M7 12v4a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3v-4"/><path d="M9 9V6m6 3V6"/><path d="M10 15h4"/></svg>
+            </span>
+            <h3>Cirugía de hernias</h3>
+            <p class="service-short-desc">Corrección de hernias inguinales, umbilicales, epigástricas o de pared abdominal.</p>
+            <div class="service-full-desc hidden">
+              <p>Puede requerir técnica abierta o laparoscópica, con mallas quirúrgicas según la anatomía y el caso.</p>
+            </div>
+            <button class="btn-service-more" aria-expanded="false">
+              <span>Ver más</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3c3 2 5 5 5 9 0 4-2.5 7-6 9"/><path d="M15 4c2.7 2.8 4 5.5 4 8.5 0 2.7-1.1 5.2-3 7.5"/><path d="M7 13h5"/></svg>
+            </span>
+            <h3>Apendicectomía</h3>
+            <p class="service-short-desc">Manejo quirúrgico de apendicitis aguda con enfoque oportuno y seguro.</p>
+            <div class="service-full-desc hidden">
+              <p>La atención temprana ayuda a disminuir complicaciones y permite planificar mejor la recuperación.</p>
+            </div>
+            <button class="btn-service-more" aria-expanded="false">
+              <span>Ver más</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 5c3-2 7-2 10 0"/><path d="M7 19c3 2 7 2 10 0"/><path d="M5 8c-1 2.5-1 5.5 0 8"/><path d="M19 8c1 2.5 1 5.5 0 8"/><path d="M9 9h6v6H9z"/><path d="M9 12h6M12 9v6"/></svg>
+            </span>
+            <h3>Pared abdominal</h3>
+            <p class="service-short-desc">Evaluación y reparación de defectos de pared, eventraciones y diástasis seleccionadas.</p>
+            <div class="service-full-desc hidden">
+              <p>El objetivo es recuperar estabilidad abdominal, función y seguridad en las actividades diarias.</p>
+            </div>
+            <button class="btn-service-more" aria-expanded="false">
+              <span>Ver más</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c4-3 6-6 6-10a6 6 0 0 0-12 0c0 4 2 7 6 10Z"/><path d="M12 8v6"/><path d="M9 11h6"/></svg>
+            </span>
+            <h3>Lipomas y quistes</h3>
+            <p class="service-short-desc">Retiro de lesiones superficiales seleccionadas bajo valoración médica previa.</p>
+            <div class="service-full-desc hidden">
+              <p>Se revisa tamaño, ubicación y características para indicar el procedimiento más adecuado.</p>
+            </div>
+            <button class="btn-service-more" aria-expanded="false">
+              <span>Ver más</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </article>
+        </div>
+      </div>
     </div>
 
-    <div class="services-grid">
-      <!-- Columna: Cirugía Laparoscópica (Featured style) -->
-      <div class="services-column featured">
-        <h3 class="services-column-title">
-          <!-- Star SVG -->
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          Cirugía Laparoscópica (Mínima Invasión)
-        </h3>
-        
-        <div class="service-list">
-          <div class="service-card">
-            <h4>Colecistectomía Laparoscópica <span class="service-tag">Frecuente</span></h4>
-            <p class="service-short-desc">Extracción de la vesícula biliar por presencia de cálculos (piedras) mediante incisiones milimétricas.</p>
-            <div class="service-full-desc hidden">
-              <p>Ofrece menor dolor postoperatorio, menor cicatriz y rápida alta clínica tras una <strong>cirugía laparoscópica en Cuenca</strong> con tecnología laparoscópica moderna.</p>
-            </div>
-            <button class="btn-service-more" aria-expanded="false">
-              <span>Ver más</span>
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-          </div>
-          <div class="service-card">
-            <h4>Hernioplastia Laparoscópica <span class="service-tag">Avanzada</span></h4>
-            <p class="service-short-desc">Reparación de hernias inguinales o de la pared abdominal mediante laparoscopía.</p>
-            <div class="service-full-desc hidden">
-              <p>Incluye la colocación de mallas biocompatibles de alta resistencia para evitar la reaparición y acelerar la recuperación.</p>
-            </div>
-            <button class="btn-service-more" aria-expanded="false">
-              <span>Ver más</span>
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-          </div>
-          <div class="service-card">
-            <h4>Apendicectomía Laparoscópica <span class="service-tag">Urgencia</span></h4>
-            <p class="service-short-desc">Procedimiento de <strong>cirugía laparoscópica en Cuenca</strong> para extraer el apéndice inflamado.</p>
-            <div class="service-full-desc hidden">
-              <p>Se realiza de urgencia ante cuadros de apendicitis aguda, previniendo peritonitis y minimizando el tiempo de recuperación.</p>
-            </div>
-            <button class="btn-service-more" aria-expanded="false">
-              <span>Ver más</span>
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-          </div>
-        </div>
+    <div class="services-bottom-cta">
+      <div>
+        <span class="service-icon compact" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </span>
+        <p><strong>¿Necesita orientación sobre su caso?</strong><br />Agende una valoración para revisar síntomas, exámenes y alternativas de tratamiento.</p>
       </div>
-
-      <!-- Columna: Cirugía Convencional (Standard style) -->
-      <div class="services-column standard">
-        <h3 class="services-column-title">
-          <!-- Activity SVG -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          Cirugía Convencional y Procedimientos
-        </h3>
-        
-        <div class="service-list">
-          <div class="service-card">
-            <h4>Extirpación de Lipomas y Quistes</h4>
-            <p class="service-short-desc">Retiro ambulatorio de lipomas, quistes sebáceos o pequeños tumores de piel bajo anestesia local.</p>
-            <div class="service-full-desc hidden">
-              <p>Procedimiento rápido y seguro dentro de la práctica de <strong>cirugía general en Cuenca</strong> en una sesión corta.</p>
-            </div>
-            <button class="btn-service-more" aria-expanded="false">
-              <span>Ver más</span>
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-          </div>
-          <div class="service-card">
-            <h4>Reparación de Hernia Convencional</h4>
-            <p class="service-short-desc">Corrección de hernias umbilicales, epigástricas o inguinales grandes mediante técnica convencional.</p>
-            <div class="service-full-desc hidden">
-              <p>Ideal según la valoración física, estado general y anatomía específica de cada paciente.</p>
-            </div>
-            <button class="btn-service-more" aria-expanded="false">
-              <span>Ver más</span>
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-          </div>
-          <div class="service-card">
-            <h4>Reconstrucción de Pared Abdominal</h4>
-            <p class="service-short-desc">Cirugía reparadora de eventraciones (hernias en cicatrices de operaciones antiguas).</p>
-            <div class="service-full-desc hidden">
-              <p>Restaura la fuerza, estabilidad y función natural de la musculatura del abdomen.</p>
-            </div>
-            <button class="btn-service-more" aria-expanded="false">
-              <span>Ver más</span>
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
+      <a class="services-cta-button" href="https://wa.me/593982757711?text=Hola%20Dr.%20Vintimilla,%20deseo%20agendar%20una%20consulta%20de%20valoración." target="_blank" rel="noopener">Agendar consulta</a>
     </div>
   </div>
 </section>
